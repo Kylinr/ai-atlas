@@ -6,12 +6,12 @@
   <meta name="description" content="从模型、算力、数据、应用、电力和资本六个维度，逐层核查31个重点国家的AI基础能力。查看指标、国别事实、数据日期与原始来源。">
   <meta name="theme-color" content="#102d38">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102d38'/%3E%3Cpath d='M13 48h38M19 38h32M27 28h24M36 18h15' stroke='%23b6ded5' stroke-width='5'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./style.css?v=e3eb6ea71df3">
-  <script src="./data.js?v=6325b72ebc38" defer></script><script src="./app.js?v=78e22739693d" defer></script>
+  <link rel="stylesheet" href="./style.css?v=1a300c1a807a">
+  <script src="./data.js?v=9a8bc699d67c" defer></script><script src="./app.js?v=ee3627ae6681" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#research">跳到梯度内容</a>
-  <header class="site-header"><a class="brand" href="#models"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>AI CAPACITY ATLAS<small>AI基础能力梯度图谱</small></span></a><div class="edition"><span class="live-dot"></span>研究版 04 <span class="edition-date">2026.11.09</span></div></header>
+  <header class="site-header"><a class="brand" href="#models"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>AI CAPACITY ATLAS<small>AI基础能力梯度图谱</small></span></a><div class="edition"><span class="live-dot"></span>研究版 05 <span class="edition-date">2026.11.09</span></div></header>
   <main>
     <section class="hero">
       <div><p class="eyebrow">GLOBAL AI · COUNTRY EVIDENCE</p><h1>把AI能力，<br>放回可核查的基础上。</h1><p class="hero-copy">模型由谁研发，芯片在哪里，数据与应用如何落地，电力与资金能否支撑。<br class="desktop-break">六个维度分别核查，每个国家都有依据与边界。</p></div>
@@ -24,9 +24,11 @@
       <div class="view-switch" id="view-switch" role="group" aria-label="切换指标视角" hidden></div>
       <div class="metric-strip" id="metric-strip"></div>
       <div class="dimension-notice" id="dimension-notice"></div>
-      <div class="research-tools"><div class="view-meta"><span id="coverage-count"></span><span class="separator">/</span><span>点击国家，逐条核查依据</span></div><div class="filters"><label class="sr-only" for="country-search">查找国家</label><input id="country-search" type="search" placeholder="查找国家…" autocomplete="off"><label class="sr-only" for="region-filter">地区筛选</label><select id="region-filter"><option value="all">全部地区</option><option value="亚洲">亚洲</option><option value="非洲">非洲</option><option value="拉美">拉美</option><option value="欧美">欧美对照</option></select></div></div>
+      <aside id="growth-preview" class="growth-preview" aria-label="IDC基础与增长概览" hidden></aside>
+      <div class="research-tools"><div class="view-meta"><span id="coverage-count"></span><span class="separator">/</span><span id="research-hint">点击国家，逐条核查依据</span></div><div class="filters"><label class="sr-only" for="country-search">查找国家</label><input id="country-search" type="search" placeholder="查找国家…" autocomplete="off"><label class="sr-only" for="region-filter">地区筛选</label><select id="region-filter"><option value="all">全部地区</option><option value="亚洲">亚洲</option><option value="非洲">非洲</option><option value="拉美">拉美</option><option value="欧美">欧美对照</option></select></div></div>
       <div id="ladder" class="ladder" aria-live="polite"></div>
       <section id="ecosystem" class="ecosystem" aria-label="开放模型生态统计" hidden></section>
+      <section id="project-pipeline" class="project-pipeline" aria-label="IDC在建项目及预期交付" hidden></section>
       <p class="empty-results" id="empty-results" hidden>没有匹配的国家。请调整关键词或地区。</p>
       <p class="tier-footnote" id="tier-footnote">层级是本研究的分析分组，不是来源机构发布的官方等级。不同维度不加总；无披露、未覆盖和未达到门槛分别处理。</p>
     </section>
@@ -34,7 +36,7 @@
     <section class="review-section" id="review"><div class="section-heading"><div><p class="eyebrow">EVIDENCE REVIEW / 核查记录</p><h2>这一次，核对了什么。</h2></div><span class="muted small">事实、估计与待验证项分开</span></div><div id="review-content"></div></section>
     <section class="reading-section"><div><p class="eyebrow">READING NOTES / 阅读规则</p><h2>先对齐口径，<br>再比较位置。</h2></div><div class="reading-rules"><article><span>01</span><h3>原始事实与研究分档分开</h3><p>每条国别记录保留数值、时间和来源。档位依据明确规则生成，读者可以检查是否应当调整。</p></article><article><span>02</span><h3>同一层里，也有不同基础</h3><p>自主预训练、开放底座适配、托管调用分别记录。芯片到货估计、已投运容量和建设计划不会相加。</p></article><article><span>03</span><h3>代理指标明确说清楚</h3><p>开放统计数据不等于训练语料存量，使用渗透率不等于付费收入，接电容量不等于实际用电，私人融资不等于国家AI总投入。</p></article></div></section>
   </main>
-  <footer><span>AI基础能力梯度图谱 · 研究版 04</span><span>本版更新 2026年11月9日 · 各指标数据期见来源</span><button class="text-link" type="button" id="export-data">下载本版研究数据 ↓</button></footer>
+  <footer><span>AI基础能力梯度图谱 · 研究版 05</span><span>本版更新 2026年11月9日 · 各指标数据期见来源</span><button class="text-link" type="button" id="export-data">下载本版研究数据 ↓</button></footer>
   <dialog id="country-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><p class="eyebrow" id="dialog-kicker"></p><button class="close-button" id="dialog-close" type="button" aria-label="关闭国家详情">×</button></div><div class="dialog-body" id="dialog-body"></div><div class="dialog-bottom"><span id="copy-status" role="status"></span><button class="primary-button" id="copy-record" type="button">复制核查条目</button></div></dialog>
   <dialog id="method-dialog" aria-labelledby="method-title"><div class="dialog-head"><p class="eyebrow">METHODOLOGY / 分层依据</p><button class="close-button" id="method-close" type="button" aria-label="关闭分层方法">×</button></div><div class="dialog-body" id="method-body"></div></dialog>
   <noscript><p>请启用JavaScript以切换维度和查看来源。完整数据可在同目录data.js中查阅。</p></noscript>

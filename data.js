@@ -1,12 +1,12 @@
 window.ATLAS_DATA = {
   "meta": {
     "title": "AI基础能力梯度图谱",
-    "edition": "04",
+    "edition": "05",
     "reviewedAt": "2026-11-09",
     "scope": "31个重点国家；全球南方市场及主要供给国",
     "status": "可逐条核查的研究版；不是统一的国家AI实力总排名",
     "attribution": "各记录链接原始来源；Epoch AI数据 CC BY 4.0。本站分档与换算属于研究处理。",
-    "updateScope": "本轮新增电力、资本并调整网络位置；模型、算力、数据和应用原始数值保留2026-11-07核查快照，各自数据期不变。"
+    "updateScope": "本轮重建电力为IDC已投运基线与在建增长；其余五个主维度与开放模型样本保持前版。"
   },
   "countries": [
     {
@@ -8546,1556 +8546,1697 @@ window.ATLAS_DATA = {
     {
       "id": "power",
       "name": "电力",
-      "type": "evidence",
-      "kicker": "05 / POWER & EXPANSION",
-      "title": "电力能否接上，扩容能否兑现",
-      "description": "从电网公司、政府和运营商披露核查数据中心现场条件。默认按证据性质展示；可切换查看同口径供电规模下限。发电量、IT容量与设施供电不混成一个排名。",
-      "metric": "运行与扩容事实 · 逐项对齐口径",
-      "period": "各项单列 · 核查2026-11-09",
-      "sourceHeading": "证据来源",
-      "sourceLabel": "电网公司 / 政府 / 运营商",
-      "sourceUrl": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
-      "notice": "12 / 31 国有本轮现场或约束证据；其中4国可核实设施供电下限。≥L只说明已核验规模，不是国家总量等级。美国单项目与马来西亚电网公司组合覆盖不同，不能直接比较强弱。",
-      "methodology": "先按国家记录可追溯的运行与扩容事实，再从中筛选已经通电、明确为设施供电或电网连接容量的项目。仅汇总不重叠的已核实范围，以MW设置数量级门槛。本轮没有全国容量普查，因此分层一律表示≥L下限，而非国家总量等级。",
-      "limitations": "各国证据覆盖差别显著：美国和南非为单项目，法国为输电网直连范围，马来西亚为TNB服务范围。不能据下限判断马来西亚供电能力超过美国。IT容量、实际负荷、年度电量、在建和规划均不计入供电梯度。",
-      "methodSources": [
-        {
-          "title": "Key Questions on Energy and AI · 电力与接电约束",
-          "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
-          "publisher": "IEA",
-          "date": "2026",
-          "locator": ""
-        },
-        {
-          "title": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-          "url": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-          "publisher": "Tenaga Nasional Berhad",
-          "date": "2026",
-          "locator": ""
-        },
-        {
-          "title": "MLGW public update regarding utility support for xAI",
-          "url": "https://www.mlgw.com/images/content/files/pdf/new/5-5-25%20xAI%20Update.pdf",
-          "publisher": "Memphis Light, Gas and Water",
-          "date": "2025-05-05",
-          "locator": ""
-        },
-        {
-          "title": "2025 Electricity Review — Consumption",
-          "url": "https://analysesetdonnees.rte-france.com/en/annual-review-2025/consumption",
-          "publisher": "RTE",
-          "date": "2026",
-          "locator": ""
-        },
-        {
-          "title": "Closing Speech by SMS Tan Kiat How for the Second Reading of the Digital Infrastructure Bill",
-          "url": "https://www.mddi.gov.sg/newsroom/closing-speech-by-sms-tan-kiat-how-for-the-second-reading-of-the-digital-infrastructure-bill/",
-          "publisher": "Ministry of Digital Development and Information",
-          "date": "2026-10-07",
-          "locator": ""
-        },
-        {
-          "title": "Teraco completes significant JB4 hyperscale data centre expansion",
-          "url": "https://www.teraco.co.za/news/teraco-completes-significant-jb4-hyperscale-data-centre-expansion-incorporating-new-sustainability-designs/",
-          "publisher": "Teraco",
-          "date": "2025-08-12",
-          "locator": ""
-        }
-      ],
+      "kicker": "05 / IDC CAPACITY & GROWTH",
+      "title": "IDC承载基础，与在建增长",
+      "description": "已投运IT容量作为基础，已开工项目展示下一步增长。国别基线与项目进展分别标注日期、覆盖范围和单位；已投运、在建与远期目标一眼区分。",
+      "metric": "已投运 IDC 的 IT 负载容量",
+      "period": "基线 2025 Q2 · 项目核查 2026-11-09",
+      "sourceLabel": "意大利央行 / Bloomberg–DC Byte",
+      "sourceUrl": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+      "notice": "同源公开表覆盖本研究11/31国，衡量数据库跟踪容量，不是全国IDC普查。中国等国可能显著漏计；保留历史基线，较新数据与在建项目另列，不拼成“当前全国总量”。",
+      "methodology": "统一使用2025 Q2、同一数据库的live IT capacity，以10 GW、1 GW、100 MW、10 MW分档。设施按所在国家归属。项目增长页逐项记录建设状态、在建分期、园区总规模和交付目标；未完成去重和定义对账前，不将项目相加到国别基线。",
+      "limitations": "原表15国，本研究覆盖其中11国。数据库关注市场相关设施，非完整全国普查；IT承载量不等于GPU数量、实际负荷或AI专用容量。2026新披露不能无条件覆盖历史基线。",
       "tiers": [
         {
           "level": 5,
-          "title": "至少十GW级",
-          "range": "已核实下限 ≥ 10 GW",
-          "definition": "至少已核实10 GW已接电设施供电容量。"
+          "title": "十GW级",
+          "range": "≥ 10 GW IT",
+          "definition": "数据库跟踪的已投运IT容量至少10 GW。"
         },
         {
           "level": 4,
-          "title": "至少GW级",
-          "range": "下限 1–不足10 GW",
-          "definition": "当前已核实下限至少1 GW；真实全国总量可能处于更高层级。"
+          "title": "GW级",
+          "range": "1–不足10 GW IT",
+          "definition": "数据库跟踪的已投运IT容量至少1 GW、不足10 GW。"
         },
         {
           "level": 3,
-          "title": "至少百MW级",
-          "range": "下限 100–不足1,000 MW",
-          "definition": "当前已核实下限至少100 MW；真实全国总量可能处于更高层级。"
+          "title": "百MW级",
+          "range": "100–不足1,000 MW IT",
+          "definition": "数据库跟踪的已投运IT容量至少100 MW、不足1 GW。"
         },
         {
           "level": 2,
-          "title": "至少十MW级",
-          "range": "下限 10–不足100 MW",
-          "definition": "当前已核实下限至少10 MW；真实全国总量可能处于更高层级。"
+          "title": "十MW级",
+          "range": "10–不足100 MW IT",
+          "definition": "数据库跟踪的已投运IT容量至少10 MW、不足100 MW。"
         },
         {
           "level": 1,
-          "title": "已有供电实证",
-          "range": "已核实下限不足10 MW",
-          "definition": "仅当取得可核实的已通电容量才入档；未知不按零处理。"
+          "title": "不足十MW",
+          "range": "< 10 MW IT",
+          "definition": "仅在有已投运数值时归档；未覆盖国家不归此档。"
         }
       ],
       "records": [
         {
           "country": "US",
-          "tier": 3,
-          "isLowerBound": true,
-          "evidenceGroup": "reported",
-          "value": "2024 年用电估计 192 TWh；另有单项目接电实证",
-          "subtitle": "全国电量和单项目供电证据分别展示。已核验供电下限仅反映本轮取证范围，不可据此比较国家总量。",
-          "status": "已核实供电下限",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2024 / 2025-05-05",
-          "sortValue": 0,
-          "numericValue": 150,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "全国电量和单项目供电证据分别展示。已核验供电下限仅反映本轮取证范围，不可据此比较国家总量。 已核实供电下限达到L3门槛，标为≥L3；不能据此确定全国上限或国家排名。",
+          "tier": 5,
+          "value": "27.40 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 27.4,
+          "numericValue": 27.4,
+          "numericUnit": "GW IT",
+          "projectCount": 6,
+          "reason": "同源表记录27.40 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "Colossus 1 已获得电网供电 · 已接电",
-              "value": "150 MW · 2025-05-05；Memphis Paul Lowry 单个项目"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "27.40 GW IT（27,400 MW IT）"
             },
             {
-              "label": "数据中心年度用电量估计 · 历史估计",
-              "value": "192 TWh · 2024；美国数据中心，不含加密货币挖矿"
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "本轮另有6条项目/分期证据，见“在建与预期增长”；不加到历史基线上。"
+            },
+            {
+              "label": "较新旁证 · 未并入基线",
+              "value": "Savills 2026年8月报告称美国约50 GW live IT容量；未提供可复算的完整国别表，不据此计算增长率。"
             }
           ],
           "caveats": [
-            "仅一个已核验项目下限，绝非美国全国容量；同文追加 150 MW 仍为申请/建设，不能计入。",
-            "LBNL 2026 年更新的设备自下而上估算；电量不是接电容量，不换算成供电梯度。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "MLGW public update regarding utility support for xAI",
-              "url": "https://www.mlgw.com/images/content/files/pdf/new/5-5-25%20xAI%20Update.pdf",
-              "publisher": "Memphis Light, Gas and Water",
-              "date": "2025-05-05",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             },
             {
-              "title": "United States Data Center Energy Usage Report: 2025 Update",
-              "url": "https://escholarship.org/uc/item/33m6w3x0",
-              "publisher": "Lawrence Berkeley National Laboratory",
-              "date": "2026-06",
-              "locator": "范围与数据期见条目"
+              "title": "Global data centres: where the next wave of AI capacity will be built",
+              "url": "https://impacts.savills.com/technology/global-data-centres-where-the-next-wave-of-ai-capacity-will-be-built.html",
+              "publisher": "Savills / DC Byte",
+              "date": "2026-08",
+              "locator": ""
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "Colossus 1 已获得电网供电",
-              "value": 150,
-              "unit": "MW",
-              "metricBasis": "grid_supply_capacity",
-              "status": "connected",
-              "date": "2025-05-05",
-              "scope": "Memphis Paul Lowry 单个项目",
-              "sourceId": "US_MLGW_20250505",
-              "sourceURL": "https://www.mlgw.com/images/content/files/pdf/new/5-5-25%20xAI%20Update.pdf",
-              "sourceTitle": "MLGW public update regarding utility support for xAI",
-              "caveat": "仅一个已核验项目下限，绝非美国全国容量；同文追加 150 MW 仍为申请/建设，不能计入。",
-              "tierEligible": true,
-              "isLowerBound": true
-            },
-            {
-              "label": "数据中心年度用电量估计",
-              "value": 192,
-              "unit": "TWh",
-              "metricBasis": "annual_electricity_use",
-              "status": "historical_estimate",
-              "date": "2024",
-              "scope": "美国数据中心，不含加密货币挖矿",
-              "sourceId": "US_LBNL_2026",
-              "sourceURL": "https://escholarship.org/uc/item/33m6w3x0",
-              "sourceTitle": "United States Data Center Energy Usage Report: 2025 Update",
-              "caveat": "LBNL 2026 年更新的设备自下而上估算；电量不是接电容量，不换算成供电梯度。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "CN",
-          "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "reported",
-          "value": "2025 年全国算力中心用电 170 TWh",
-          "subtitle": "国家能源局发布用电量；另有 196 TWh 不同口径，尚未对账。已接电供电容量暂未得到全国同口径证据。",
-          "status": "其他口径旁证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2025",
-          "sortValue": 0,
-          "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "国家能源局发布用电量；另有 196 TWh 不同口径，尚未对账。已接电供电容量暂未得到全国同口径证据。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "tier": 4,
+          "value": "5.37 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 5.37,
+          "numericValue": 5.37,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录5.37 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "全国算力中心年度用电量 · 官方披露",
-              "value": "170 TWh · 2025；国家能源局发布的全国算力中心口径"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "5.37 GW IT（5,370 MW IT）"
             },
             {
-              "label": "另一机构统计的算力基础设施用电量 · 口径未对账",
-              "value": "196 TWh · 2025；发改委刊文援引相关机构统计"
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            },
+            {
+              "label": "较新旁证 · 未并入基线",
+              "value": "Rystad估计2025年末已安装容量32 GW；与本表的时期、覆盖及容量定义尚未对账。"
             }
           ],
           "caveats": [
-            "算力中心包含非 AI 业务；与其他来源“数据中心/算力基础设施”口径有差异，不折算接电容量。",
-            "与国家能源局 170 TWh 未完成范围对账，仅作为口径冲突提示；不相加、不替代主事实。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "5.37 GW只代表本数据库覆盖值，不能写成中国全国全部IDC容量；也不能据此计算中美全国容量倍数。",
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "去年全国算力中心总用电量1700亿千瓦时",
-              "url": "https://prpq.nea.gov.cn/hyzx/13899.html",
-              "publisher": "国家能源局电力可靠性管理和工程质量监督中心（转载国家能源局现场发布）",
-              "date": "2026-06-01",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             },
             {
-              "title": "如何让数字经济的“心脏”跳得更绿色、更可持续？",
-              "url": "https://www.ndrc.gov.cn/wsdwhfz/202607/t20260727_1406700.html",
-              "publisher": "国家发展和改革委员会",
-              "date": "2026-07-27",
-              "locator": "范围与数据期见条目"
+              "title": "中国数据中心已安装容量与预测",
+              "url": "https://www.rystadenergy.com/news/chinas-data-center-capacity-doubling-of-power",
+              "publisher": "Rystad Energy",
+              "date": "2025年末实绩估计 / 2026预测",
+              "locator": ""
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "全国算力中心年度用电量",
-              "value": 170,
-              "unit": "TWh",
-              "metricBasis": "annual_electricity_use",
-              "status": "official_reported",
-              "date": "2025",
-              "scope": "国家能源局发布的全国算力中心口径",
-              "sourceId": "CN_NEA_2026",
-              "sourceURL": "https://prpq.nea.gov.cn/hyzx/13899.html",
-              "sourceTitle": "去年全国算力中心总用电量1700亿千瓦时",
-              "caveat": "算力中心包含非 AI 业务；与其他来源“数据中心/算力基础设施”口径有差异，不折算接电容量。",
-              "tierEligible": false,
-              "isLowerBound": false
-            },
-            {
-              "label": "另一机构统计的算力基础设施用电量",
-              "value": 196,
-              "unit": "TWh",
-              "metricBasis": "annual_electricity_use",
-              "status": "conflicting_scope_estimate",
-              "date": "2025",
-              "scope": "发改委刊文援引相关机构统计",
-              "sourceId": "CN_NDRC_2026",
-              "sourceURL": "https://www.ndrc.gov.cn/wsdwhfz/202607/t20260727_1406700.html",
-              "sourceTitle": "如何让数字经济的“心脏”跳得更绿色、更可持续？",
-              "caveat": "与国家能源局 170 TWh 未完成范围对账，仅作为口径冲突提示；不相加、不替代主事实。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "FR",
           "tier": 3,
-          "isLowerBound": true,
-          "evidenceGroup": "reported",
-          "value": "RTE 直连供电容量 770 MW",
-          "subtitle": "2025 年末输电网运营商披露，未包含配电网数据中心；报告同时提示实际用电爬坡慢于接电容量。",
-          "status": "已核实供电下限",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2025 / 2025-12",
-          "sortValue": 0,
-          "numericValue": 770,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "2025 年末输电网运营商披露，未包含配电网数据中心；报告同时提示实际用电爬坡慢于接电容量。 已核实供电下限达到L3门槛，标为≥L3；不能据此确定全国上限或国家排名。",
+          "value": "0.87 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 0.87,
+          "numericValue": 0.87,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录0.87 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "直接接入输电网的数据中心连接容量 · 已接电",
-              "value": "770 MW · 2025-12；仅 RTE 输电网直连数据中心，不含配电网接入"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "0.87 GW IT（870 MW IT）"
             },
             {
-              "label": "RTE 直连数据中心接电容量平均使用率 · 电力容量使用率",
-              "value": "22 % · 2025；RTE 直连数据中心"
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
           ],
           "caveats": [
-            "这是可核实的全国下限，非全国总量，非 AI 专用容量。",
-            "电力连接容量使用率，非服务器或 GPU 利用率。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "2025 Electricity Review — Consumption",
-              "url": "https://analysesetdonnees.rte-france.com/en/annual-review-2025/consumption",
-              "publisher": "RTE",
-              "date": "2026",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "直接接入输电网的数据中心连接容量",
-              "value": 770,
-              "unit": "MW",
-              "metricBasis": "grid_connection_capacity",
-              "status": "connected",
-              "date": "2025-12",
-              "scope": "仅 RTE 输电网直连数据中心，不含配电网接入",
-              "sourceId": "FR_RTE_2025",
-              "sourceURL": "https://analysesetdonnees.rte-france.com/en/annual-review-2025/consumption",
-              "sourceTitle": "2025 Electricity Review — Consumption",
-              "caveat": "这是可核实的全国下限，非全国总量，非 AI 专用容量。",
-              "tierEligible": true,
-              "isLowerBound": true
-            },
-            {
-              "label": "RTE 直连数据中心接电容量平均使用率",
-              "value": 22,
-              "unit": "%",
-              "metricBasis": "connection_capacity_usage",
-              "status": "reported_utilisation",
-              "date": "2025",
-              "scope": "RTE 直连数据中心",
-              "sourceId": "FR_RTE_2025",
-              "sourceURL": "https://analysesetdonnees.rte-france.com/en/annual-review-2025/consumption",
-              "sourceTitle": "2025 Electricity Review — Consumption",
-              "caveat": "电力连接容量使用率，非服务器或 GPU 利用率。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "GB",
-          "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "reported",
-          "value": "2024 年大不列颠数据中心用电估计 4.5 TWh",
-          "subtitle": "政府以电表资料估算；排除企业内部数据中心，范围并非完整英国。",
-          "status": "其他口径旁证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2024",
-          "sortValue": 0,
-          "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "政府以电表资料估算；排除企业内部数据中心，范围并非完整英国。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "tier": 4,
+          "value": "1.59 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.59,
+          "numericValue": 1.59,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录1.59 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "大不列颠数据中心从电网用电 · 基于电表的估计",
-              "value": "4.5 TWh · 2024；Great Britain，排除企业内部数据中心和北爱尔兰"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "1.59 GW IT（1,590 MW IT）"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
           ],
           "caveats": [
-            "范围小于英国全国；不能换算为完整接电容量。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "Data centre electricity consumption in Great Britain, 2020 to 2024",
-              "url": "https://www.gov.uk/government/publications/energy-trends-june-2026-special-feature-article-data-centre-electricity-consumption-in-great-britain-2020-to-2024",
-              "publisher": "Department for Energy Security and Net Zero",
-              "date": "2026-06",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "大不列颠数据中心从电网用电",
-              "value": 4.5,
-              "unit": "TWh",
-              "metricBasis": "annual_electricity_use",
-              "status": "meter_based_estimate",
-              "date": "2024",
-              "scope": "Great Britain，排除企业内部数据中心和北爱尔兰",
-              "sourceId": "GB_DESNZ_2026",
-              "sourceURL": "https://www.gov.uk/government/publications/energy-trends-june-2026-special-feature-article-data-centre-electricity-consumption-in-great-britain-2020-to-2024",
-              "sourceTitle": "Data centre electricity consumption in Great Britain, 2020 to 2024",
-              "caveat": "范围小于英国全国；不能换算为完整接电容量。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "DE",
-          "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "reported",
-          "value": "2026 年 IT 容量估计 3.3 GW",
-          "subtitle": "Bitkom/Borderstep 的全国行业估计，提供 IT 承载证据；与设施供电容量口径分开。",
-          "status": "其他口径旁证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2026",
-          "sortValue": 0,
-          "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "Bitkom/Borderstep 的全国行业估计，提供 IT 承载证据；与设施供电容量口径分开。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "tier": 4,
+          "value": "1.26 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.26,
+          "numericValue": 1.26,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录1.26 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "数据中心 IT 接入容量估计 · 本年估计",
-              "value": "3,300 MW · 2026；德国数据中心，Bitkom/Borderstep 研究"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "1.26 GW IT（1,260 MW IT）"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
           ],
           "caveats": [
-            "行业研究估计，明确是 IT 容量，不能与设施总供电 MW 混排。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "KI-Boom treibt Rechenzentren in Deutschland – dennoch bauen USA und China Vorsprung aus",
-              "url": "https://www.bitkom.org/Presse/Presseinformation/KI-Boom-treibt-Rechenzentren-in-Deutschland",
-              "publisher": "Bitkom / Borderstep Institut",
-              "date": "2026-11",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "数据中心 IT 接入容量估计",
-              "value": 3300,
-              "unit": "MW",
-              "metricBasis": "it_capacity",
-              "status": "current_year_estimate",
-              "date": "2026",
-              "scope": "德国数据中心，Bitkom/Borderstep 研究",
-              "sourceId": "DE_BITKOM_2026",
-              "sourceURL": "https://www.bitkom.org/Presse/Presseinformation/KI-Boom-treibt-Rechenzentren-in-Deutschland",
-              "sourceTitle": "KI-Boom treibt Rechenzentren in Deutschland – dennoch bauen USA und China Vorsprung aus",
-              "caveat": "行业研究估计，明确是 IT 容量，不能与设施总供电 MW 混排。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "CA",
-          "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
-          "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
-          "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
-        },
-        {
-          "country": "JP",
-          "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "constraints",
-          "value": "官方指出部分项目接电需十年以上",
-          "subtitle": "METI 将电网扩建、脱碳电源与通信同步规划列为数据中心扩张条件；当前供电容量待补证。",
-          "status": "其他口径旁证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2026",
-          "sortValue": 0,
-          "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "METI 将电网扩建、脱碳电源与通信同步规划列为数据中心扩张条件；当前供电容量待补证。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "tier": 4,
+          "value": "1.45 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.45,
+          "numericValue": 1.45,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录1.45 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "部分数据中心接电等待时间 · 接电约束",
-              "value": "10 年以上 · 2026；METI 列举的部分项目情形"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "1.45 GW IT（1,450 MW IT）"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
           ],
           "caveats": [
-            "是部分案例的约束，不是全国平均等待年限，也不代表所有项目。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "データセンター集積型における課題と方向性",
-              "url": "https://www.meti.go.jp/shingikai/sankoshin/shin_kijiku/pdf/031_s01_00.pdf",
-              "publisher": "経済産業省",
-              "date": "2026",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "JP",
+          "tier": 4,
+          "value": "1.64 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.64,
+          "numericValue": 1.64,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录1.64 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
+          "facts": [
             {
-              "label": "部分数据中心接电等待时间",
-              "value": 10,
-              "unit": "年以上",
-              "metricBasis": "grid_connection_lead_time",
-              "status": "policy_reported_constraint",
-              "date": "2026",
-              "scope": "METI 列举的部分项目情形",
-              "sourceId": "JP_METI_2026",
-              "sourceURL": "https://www.meti.go.jp/shingikai/sankoshin/shin_kijiku/pdf/031_s01_00.pdf",
-              "sourceTitle": "データセンター集積型における課題と方向性",
-              "caveat": "是部分案例的约束，不是全国平均等待年限，也不代表所有项目。",
-              "tierEligible": false,
-              "isLowerBound": false
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "1.64 GW IT（1,640 MW IT）"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
+          ],
+          "caveats": [
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
+          ],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "KR",
-          "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
-          "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
-          "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
-        },
-        {
-          "country": "IN",
-          "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "reported",
-          "value": "政府披露已安装数据中心容量约 1,575 MW",
-          "subtitle": "2026 年 8 月议会答复提供规模证据，但 MW 的电力边界不明确，暂不与接电容量混排。",
-          "status": "其他口径旁证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2026-08-05",
-          "sortValue": 0,
-          "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "2026 年 8 月议会答复提供规模证据，但 MW 的电力边界不明确，暂不与接电容量混排。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "tier": 3,
+          "value": "0.76 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 0.76,
+          "numericValue": 0.76,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录0.76 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "全国已安装数据中心容量 · 已安装披露",
-              "value": "1,575 MW · 2026-08-05；印度全国，电子和信息技术部议会答复"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "0.76 GW IT（760 MW IT）"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
           ],
           "caveats": [
-            "原文未明确是 IT 负荷、设施总功率或接电容量，不能直接纳入供电梯度。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "Government Highlights Rapid Expansion of Data Centre Capacity to Support India's Growing Digital and AI Infrastructure",
-              "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2295483&lang=1&reg=1",
-              "publisher": "Ministry of Electronics & IT / PIB",
-              "date": "2026-08-06",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "IN",
+          "tier": 4,
+          "value": "1.39 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.39,
+          "numericValue": 1.39,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录1.39 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
+          "facts": [
             {
-              "label": "全国已安装数据中心容量",
-              "value": 1575,
-              "unit": "MW",
-              "metricBasis": "capacity_basis_unspecified",
-              "status": "installed_reported",
-              "date": "2026-08-05",
-              "scope": "印度全国，电子和信息技术部议会答复",
-              "sourceId": "IN_PIB_20260806",
-              "sourceURL": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2295483&lang=1&reg=1",
-              "sourceTitle": "Government Highlights Rapid Expansion of Data Centre Capacity to Support India's Growing Digital and AI Infrastructure",
-              "caveat": "原文未明确是 IT 负荷、设施总功率或接电容量，不能直接纳入供电梯度。",
-              "tierEligible": false,
-              "isLowerBound": false
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "1.39 GW IT（1,390 MW IT）"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
+          ],
+          "caveats": [
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
+          ],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "AE",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "reported",
-          "value": "AUH6 已启用 31.8 MW IT；Stargate 首期投运待核",
-          "subtitle": "已运营项目和建设目标分开；5 GW 园区、1 GW 集群及 200 MW 首期属于包含关系，不相加。",
-          "status": "其他口径旁证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2024-02 / 2025-05-22",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "已运营项目和建设目标分开；5 GW 园区、1 GW 集群及 200 MW 首期属于包含关系，不相加。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "numericUnit": "GW IT",
+          "projectCount": 1,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
           "facts": [
             {
-              "label": "AUH6 已启用 IT 电力容量 · 已运营",
-              "value": "31.8 MW · 2024-02；Khazna AUH6 单个数据中心，Masdar City"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
             },
             {
-              "label": "Stargate UAE 首期目标 · 宣布目标",
-              "value": "200 MW · 2025-05-22；Stargate UAE 首期，预期 2026 年上线"
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "本轮另有1条项目/分期证据，见“在建与预期增长”；不加到历史基线上。"
             }
           ],
           "caveats": [
-            "运营商披露的是 IT 容量，非设施总供电，非全国总量。",
-            "这是原始建设公告；本轮未核实投运，不能因日历已到 2026 年就算已上线。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "Khazna Data Centers Fuels UAE’s Digital Future with the Launch of Hyperscale AI-ready Data Center in Masdar City",
-              "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-fuels-uaes-digital-future-with-the-launch-of-hyperscale-ai-ready-data-center-in-masdar-city/",
-              "publisher": "Khazna Data Centers",
-              "date": "2024-02",
-              "locator": "范围与数据期见条目"
-            },
-            {
-              "title": "Global tech alliance launches Stargate UAE",
-              "url": "https://www.mediaoffice.abudhabi/en/technology/global-tech-alliance-launches-stargate-uae/",
-              "publisher": "Abu Dhabi Media Office",
-              "date": "2025-05-22",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "AUH6 已启用 IT 电力容量",
-              "value": 31.8,
-              "unit": "MW",
-              "metricBasis": "it_capacity",
-              "status": "operational",
-              "date": "2024-02",
-              "scope": "Khazna AUH6 单个数据中心，Masdar City",
-              "sourceId": "AE_KHAZNA_AUH6",
-              "sourceURL": "https://khaznadatacenters.com/press-release/khazna-data-centers-fuels-uaes-digital-future-with-the-launch-of-hyperscale-ai-ready-data-center-in-masdar-city/",
-              "sourceTitle": "Khazna Data Centers Fuels UAE’s Digital Future with the Launch of Hyperscale AI-ready Data Center in Masdar City",
-              "caveat": "运营商披露的是 IT 容量，非设施总供电，非全国总量。",
-              "tierEligible": false,
-              "isLowerBound": true
-            },
-            {
-              "label": "Stargate UAE 首期目标",
-              "value": 200,
-              "unit": "MW",
-              "metricBasis": "capacity_basis_unspecified",
-              "status": "announced_target",
-              "date": "2025-05-22",
-              "scope": "Stargate UAE 首期，预期 2026 年上线",
-              "sourceId": "AE_STARGATE",
-              "sourceURL": "https://www.mediaoffice.abudhabi/en/technology/global-tech-alliance-launches-stargate-uae/",
-              "sourceTitle": "Global tech alliance launches Stargate UAE",
-              "caveat": "这是原始建设公告；本轮未核实投运，不能因日历已到 2026 年就算已上线。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "SA",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "reported",
-          "value": "stc 披露 2024 年末活跃 IT 容量 92 MW",
-          "subtitle": "当前可靠数值是运营商组合和较早市场统计；国家级 GW 建设目标不能直接写成已投运。",
-          "status": "其他口径旁证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2024-03 / 2024-12",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "当前可靠数值是运营商组合和较早市场统计；国家级 GW 建设目标不能直接写成已投运。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
           "facts": [
             {
-              "label": "stc 数据中心活跃容量 · 已运营",
-              "value": "92 MW · 2024-12；stc 报告所列数据中心组合；非全国"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
             },
             {
-              "label": "全国数据中心容量行业估计 · 历史市场估计",
-              "value": "148 MW · 2024-03；沙特全国，MCIT 白皮书援引市场资料"
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
           ],
           "caveats": [
-            "IT/critical load 口径；集团资料涉及扩建与巴林规划，不能泛化为沙特全国供电总量。",
-            "日期较早、MW 基准未明确，只作历史旁证，不作当前供电梯队。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "stc Sustainability Report 2024 — Development of human capital through digital innovation",
-              "url": "https://www.stc.com.sa/content/dam/groupsites/stc-sustainability-report-2024/assets/img/pdfs/Development_of_human_capital_through_digital_innovation.pdf",
-              "publisher": "stc",
-              "date": "2025",
-              "locator": "范围与数据期见条目"
-            },
-            {
-              "title": "KSA Computing Infrastructure White Paper",
-              "url": "https://www.mcit.gov.sa/sites/default/files/2025-04/KSA%20Computing%20Infrastructure%20Whiter%20Paper.pdf",
-              "publisher": "Saudi Ministry of Communications and Information Technology",
-              "date": "2025-04",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "stc 数据中心活跃容量",
-              "value": 92,
-              "unit": "MW",
-              "metricBasis": "active_it_capacity",
-              "status": "operational",
-              "date": "2024-12",
-              "scope": "stc 报告所列数据中心组合；非全国",
-              "sourceId": "SA_STC_2024",
-              "sourceURL": "https://www.stc.com.sa/content/dam/groupsites/stc-sustainability-report-2024/assets/img/pdfs/Development_of_human_capital_through_digital_innovation.pdf",
-              "sourceTitle": "stc Sustainability Report 2024 — Development of human capital through digital innovation",
-              "caveat": "IT/critical load 口径；集团资料涉及扩建与巴林规划，不能泛化为沙特全国供电总量。",
-              "tierEligible": false,
-              "isLowerBound": true
-            },
-            {
-              "label": "全国数据中心容量行业估计",
-              "value": 148,
-              "unit": "MW",
-              "metricBasis": "capacity_basis_unspecified",
-              "status": "historical_market_estimate",
-              "date": "2024-03",
-              "scope": "沙特全国，MCIT 白皮书援引市场资料",
-              "sourceId": "SA_MCIT_2025",
-              "sourceURL": "https://www.mcit.gov.sa/sites/default/files/2025-04/KSA%20Computing%20Infrastructure%20Whiter%20Paper.pdf",
-              "sourceTitle": "KSA Computing Infrastructure White Paper",
-              "caveat": "日期较早、MW 基准未明确，只作历史旁证，不作当前供电梯队。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "SG",
-          "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "reported",
-          "value": "2024 年用电约 6.5 TWh；1.6 GW 含新获配容量",
-          "subtitle": "政府明确 1.6 GW 是 IT 容量且含 200 MW 新分配指标，不能整体标为已投运。",
-          "status": "其他口径旁证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2024 / 2026-10-07",
-          "sortValue": 0,
-          "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "政府明确 1.6 GW 是 IT 容量且含 200 MW 新分配指标，不能整体标为已投运。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "tier": 4,
+          "value": "1.11 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.11,
+          "numericValue": 1.11,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "同源表记录1.11 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "数据中心最大 IT 容量（含新获配） · 含新获配容量",
-              "value": "1,600 MW · 2026-10-07；新加坡，包含第二次 DC-CFA 分配的 200 MW"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "1.11 GW IT（1,110 MW IT）"
             },
             {
-              "label": "数据中心实际年度用电 · 官方披露",
-              "value": "6.5 TWh · 2024；新加坡数据中心"
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
           ],
           "caveats": [
-            "不能全部算作已投运；不得与 Jurong Island 700 MW 园区供电规划相加，两者有重合。",
-            "年度电量不是 IT 容量或设施供电容量。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "Closing Speech by SMS Tan Kiat How for the Second Reading of the Digital Infrastructure Bill",
-              "url": "https://www.mddi.gov.sg/newsroom/closing-speech-by-sms-tan-kiat-how-for-the-second-reading-of-the-digital-infrastructure-bill/",
-              "publisher": "Ministry of Digital Development and Information",
-              "date": "2026-10-07",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "数据中心最大 IT 容量（含新获配）",
-              "value": 1600,
-              "unit": "MW",
-              "metricBasis": "it_capacity_with_allocations",
-              "status": "installed_and_allocated_mixed",
-              "date": "2026-10-07",
-              "scope": "新加坡，包含第二次 DC-CFA 分配的 200 MW",
-              "sourceId": "SG_MDDI_20261007",
-              "sourceURL": "https://www.mddi.gov.sg/newsroom/closing-speech-by-sms-tan-kiat-how-for-the-second-reading-of-the-digital-infrastructure-bill/",
-              "sourceTitle": "Closing Speech by SMS Tan Kiat How for the Second Reading of the Digital Infrastructure Bill",
-              "caveat": "不能全部算作已投运；不得与 Jurong Island 700 MW 园区供电规划相加，两者有重合。",
-              "tierEligible": false,
-              "isLowerBound": false
-            },
-            {
-              "label": "数据中心实际年度用电",
-              "value": 6.5,
-              "unit": "TWh",
-              "metricBasis": "annual_electricity_use",
-              "status": "official_reported",
-              "date": "2024",
-              "scope": "新加坡数据中心",
-              "sourceId": "SG_MDDI_20261007",
-              "sourceURL": "https://www.mddi.gov.sg/newsroom/closing-speech-by-sms-tan-kiat-how-for-the-second-reading-of-the-digital-infrastructure-bill/",
-              "sourceTitle": "Closing Speech by SMS Tan Kiat How for the Second Reading of the Digital Infrastructure Bill",
-              "caveat": "年度电量不是 IT 容量或设施供电容量。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "MY",
-          "tier": 4,
-          "isLowerBound": true,
-          "evidenceGroup": "reported",
-          "value": "TNB 已接电约 4.5 GW；实际负荷 850 MW",
-          "subtitle": "2025 年末电力公司分列了已接电、在建和签约容量，能够核验接电能力及负荷爬坡；供电范围并非全国普查。",
-          "status": "已核实供电下限",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2025-12",
-          "sortValue": 0,
-          "numericValue": 4500,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "2025 年末电力公司分列了已接电、在建和签约容量，能够核验接电能力及负荷爬坡；供电范围并非全国普查。 已核实供电下限达到L4门槛，标为≥L4；不能据此确定全国上限或国家排名。",
+          "tier": 3,
+          "value": "0.71 GW IT",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "历史基线 / 非全国普查",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 0.71,
+          "numericValue": 0.71,
+          "numericUnit": "GW IT",
+          "projectCount": 1,
+          "reason": "同源表记录0.71 GW live IT capacity。仅对这个固定数据库快照设置数量级；不混入接电容量、规划或在建项目。",
           "facts": [
             {
-              "label": "已接入电网的数据中心最大需求容量 · 已接电",
-              "value": "4,500 MW · 2025-12；TNB 服务范围，35 个项目"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "0.71 GW IT（710 MW IT）"
             },
             {
-              "label": "实际数据中心负荷 · 实际负荷",
-              "value": "850 MW · 2025-12；TNB 服务范围"
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
             },
             {
-              "label": "在建供电项目最大需求容量 · 在建",
-              "value": "1,800 MW · 2025-12；TNB 14 个项目"
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
             },
             {
-              "label": "仅已签供电协议的最大需求容量 · 已签约",
-              "value": "1,200 MW · 2025-12；TNB 7 个项目"
+              "label": "未来增长",
+              "value": "本轮另有1条项目/分期证据，见“在建与预期增长”；不加到历史基线上。"
             }
           ],
           "caveats": [
-            "接电容量包含尚未充分爬坡的项目，不是实际负荷，也不是全国 AI 专用容量；2025 年末观察值。",
-            "报告未说明是月均还是特定时点；不能用其与接电容量的比值推算 GPU 利用率。",
-            "在建，不计入已接电梯度。",
-            "签约，不计入已接电梯度。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "url": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "publisher": "Tenaga Nasional Berhad",
-              "date": "2026",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "已接入电网的数据中心最大需求容量",
-              "value": 4500,
-              "unit": "MW",
-              "metricBasis": "grid_connection_capacity",
-              "status": "connected",
-              "date": "2025-12",
-              "scope": "TNB 服务范围，35 个项目",
-              "sourceId": "MY_TNB_2025",
-              "sourceURL": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "sourceTitle": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "caveat": "接电容量包含尚未充分爬坡的项目，不是实际负荷，也不是全国 AI 专用容量；2025 年末观察值。",
-              "tierEligible": true,
-              "isLowerBound": true
-            },
-            {
-              "label": "实际数据中心负荷",
-              "value": 850,
-              "unit": "MW",
-              "metricBasis": "actual_electric_load",
-              "status": "measured_load",
-              "date": "2025-12",
-              "scope": "TNB 服务范围",
-              "sourceId": "MY_TNB_2025",
-              "sourceURL": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "sourceTitle": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "caveat": "报告未说明是月均还是特定时点；不能用其与接电容量的比值推算 GPU 利用率。",
-              "tierEligible": false,
-              "isLowerBound": false
-            },
-            {
-              "label": "在建供电项目最大需求容量",
-              "value": 1800,
-              "unit": "MW",
-              "metricBasis": "grid_connection_capacity",
-              "status": "under_construction",
-              "date": "2025-12",
-              "scope": "TNB 14 个项目",
-              "sourceId": "MY_TNB_2025",
-              "sourceURL": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "sourceTitle": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "caveat": "在建，不计入已接电梯度。",
-              "tierEligible": false,
-              "isLowerBound": false
-            },
-            {
-              "label": "仅已签供电协议的最大需求容量",
-              "value": 1200,
-              "unit": "MW",
-              "metricBasis": "grid_connection_capacity",
-              "status": "contracted",
-              "date": "2025-12",
-              "scope": "TNB 7 个项目",
-              "sourceId": "MY_TNB_2025",
-              "sourceURL": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "sourceTitle": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "caveat": "签约，不计入已接电梯度。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "ID",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 1,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "本轮另有1条项目/分期证据，见“在建与预期增长”；不加到历史基线上。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "VN",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "TH",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 1,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "本轮另有1条项目/分期证据，见“在建与预期增长”；不加到历史基线上。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "BR",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "MX",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "CL",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
-          "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
-        },
-        {
-          "country": "ZA",
-          "tier": 2,
-          "isLowerBound": true,
-          "evidenceGroup": "reported",
-          "value": "JB4 已具备 80 MW 供电、50 MW IT 容量",
-          "subtitle": "运营商扩建完成公告明确列出供电与 IT 两个边界，是适合用于供电下限的现场证据。",
-          "status": "已核实供电下限",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2025-08-12",
-          "sortValue": 0,
-          "numericValue": 80,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "运营商扩建完成公告明确列出供电与 IT 两个边界，是适合用于供电下限的现场证据。 已核实供电下限达到L2门槛，标为≥L2；不能据此确定全国上限或国家排名。",
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
           "facts": [
             {
-              "label": "JB4 公用电网供电容量 · 已运营",
-              "value": "80 MW · 2025-08-12；Teraco JB4 单个数据中心"
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
             },
             {
-              "label": "JB4 关键 IT 负荷容量 · 已运营",
-              "value": "50 MW · 2025-08-12；Teraco JB4 单个数据中心"
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
           ],
           "caveats": [
-            "扩建完成公告明确区分 80 MW utility power 和 50 MW IT，单项目下限，不是全国总量。",
-            "与 80 MW 供电是同一项目两个边界，不相加。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
-          ],
-          "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
           ],
           "sources": [
             {
-              "title": "Teraco completes significant JB4 hyperscale data centre expansion",
-              "url": "https://www.teraco.co.za/news/teraco-completes-significant-jb4-hyperscale-data-centre-expansion-incorporating-new-sustainability-designs/",
-              "publisher": "Teraco",
-              "date": "2025-08-12",
-              "locator": "范围与数据期见条目"
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
             }
           ],
-          "powerEvidence": [
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "ZA",
+          "tier": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
             {
-              "label": "JB4 公用电网供电容量",
-              "value": 80,
-              "unit": "MW",
-              "metricBasis": "grid_supply_capacity",
-              "status": "operational",
-              "date": "2025-08-12",
-              "scope": "Teraco JB4 单个数据中心",
-              "sourceId": "ZA_TERACO_JB4",
-              "sourceURL": "https://www.teraco.co.za/news/teraco-completes-significant-jb4-hyperscale-data-centre-expansion-incorporating-new-sustainability-designs/",
-              "sourceTitle": "Teraco completes significant JB4 hyperscale data centre expansion",
-              "caveat": "扩建完成公告明确区分 80 MW utility power 和 50 MW IT，单项目下限，不是全国总量。",
-              "tierEligible": true,
-              "isLowerBound": true
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
             },
             {
-              "label": "JB4 关键 IT 负荷容量",
-              "value": 50,
-              "unit": "MW",
-              "metricBasis": "it_capacity",
-              "status": "operational",
-              "date": "2025-08-12",
-              "scope": "Teraco JB4 单个数据中心",
-              "sourceId": "ZA_TERACO_JB4",
-              "sourceURL": "https://www.teraco.co.za/news/teraco-completes-significant-jb4-hyperscale-data-centre-expansion-incorporating-new-sustainability-designs/",
-              "sourceTitle": "Teraco completes significant JB4 hyperscale data centre expansion",
-              "caveat": "与 80 MW 供电是同一项目两个边界，不相加。",
-              "tierEligible": false,
-              "isLowerBound": false
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
             }
+          ],
+          "caveats": [
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
+          ],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
           ]
         },
         {
           "country": "KE",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "NG",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "EG",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "MA",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "KZ",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "TR",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "AR",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "PH",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "PK",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "BD",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         },
         {
           "country": "ET",
           "tier": 0,
-          "isLowerBound": false,
-          "evidenceGroup": "unknown",
-          "value": "供电口径待补证",
-          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
-          "status": "待补证",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "待核",
-          "sortValue": 0,
+          "value": "同源基线未覆盖",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补同口径数据",
+          "period": "2025 Q2 · 2026年6月报告；核查2026-11-09",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
           "numericValue": null,
-          "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
-          "facts": [],
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "公开容量表仅列15国，本国未列入。不能从缺席推断容量小于榜尾，也不以其他口径补入梯度。",
+          "facts": [
+            {
+              "label": "已投运IT容量 · 2025 Q2",
+              "value": "原表未覆盖；不是零"
+            },
+            {
+              "label": "地理归属",
+              "value": "按设施所在国家；不按运营商总部或芯片供应商国籍"
+            },
+            {
+              "label": "统计边界",
+              "value": "Bloomberg–DC Byte跟踪的市场相关、已运营设施；不是全国全部机房普查"
+            },
+            {
+              "label": "未来增长",
+              "value": "尚未录入本轮可核实项目；不表示没有在建工程。"
+            }
+          ],
           "caveats": [
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "基线固定为2025 Q2，不冒充2026年当前总量。更新项目单独列示，不能通过简单相加得到当前全国容量。",
+            "IT容量是可承载设备负载的功率，不是实际平均负荷、全国发电量或GPU利用率。",
+            "数据库有覆盖偏差，可能遗漏小型、楼内或未公开设施；同源不代表全国统计完整。",
+            "包含传统云、存储及其他非AI业务；不等于全部容量可用于高密度AI训练。"
+          ],
+          "sources": [
+            {
+              "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+              "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+              "publisher": "Banca d’Italia",
+              "date": "2026-06发布 / 2025 Q2数据",
+              "locator": "PDF第10页定义、第12页国别表"
+            }
           ],
           "nextChecks": [
-            "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
-            "补充实际负荷、工业电价、供电可靠性、接电工期；已落实扩容、在建和规划分别列示。"
-          ],
-          "sources": [],
-          "powerEvidence": []
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
         }
       ],
-      "lowerBoundTiers": true,
-      "evidenceGroups": [
+      "methodSources": [
         {
-          "id": "reported",
-          "level": 3,
-          "kicker": "OBSERVED",
-          "title": "运行与容量事实",
-          "range": "逐项保留日期、范围与单位"
-        },
-        {
-          "id": "constraints",
-          "level": 2,
-          "kicker": "CONSTRAINTS",
-          "title": "扩容约束",
-          "range": "接电条件；不代替已投运容量"
-        },
-        {
-          "id": "unknown",
-          "level": 0,
-          "kicker": "TO VERIFY",
-          "title": "证据待补",
-          "range": "已列入研究范围，不记零"
+          "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+          "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+          "publisher": "Banca d’Italia",
+          "date": "2026-06发布 / 2025 Q2数据",
+          "locator": "PDF第10页定义、第12页国别表"
         }
       ],
       "viewChoices": [
         {
           "id": "power",
-          "label": "运行与扩容证据"
+          "label": "已投运 IDC 基线"
         },
         {
-          "id": "power-capacity",
-          "label": "供电规模下限梯度"
+          "id": "power-growth",
+          "label": "在建与预期增长"
+        },
+        {
+          "id": "power-evidence",
+          "label": "现场供电旁证"
         }
       ],
-      "footnote": "本视图按证据性质分组，不是能力高低排序。每条事实注明是否为已接电、IT容量、实际用电或建设目标；不同状态和口径不相加。"
+      "coverageLabel": "国有同源 IDC 基线",
+      "footnote": "层级仅描述2025 Q2数据库覆盖值；并非2026全国IDC实力排名。点击国家查看覆盖边界及最新旁证。",
+      "growthPreview": [
+        {
+          "label": "已投运基础",
+          "value": "11 / 31国",
+          "detail": "同源历史快照 · 2025 Q2"
+        },
+        {
+          "label": "明确在建分期",
+          "value": "Milam 753 MW IT",
+          "detail": "两栋主体施工 · 2027–2028交付目标"
+        },
+        {
+          "label": "总体建设承诺",
+          "value": "Stargate 10 GW",
+          "detail": "多站点计划 · 与基线分开"
+        }
+      ],
+      "downloadUrl": "idc-live-it-capacity-2025q2-public.csv"
     },
     {
       "id": "capital",
@@ -20443,20 +20584,1331 @@ window.ATLAS_DATA = {
       "baseId": "applications"
     },
     {
-      "id": "power-capacity",
-      "name": "供电规模下限",
-      "type": "ladder",
+      "id": "power-growth",
+      "name": "IDC在建增长",
+      "kicker": "05 / IDC CAPACITY & GROWTH",
+      "title": "从已经开工，到可预期的交付",
+      "description": "实线表示项目自身已投运容量，斜纹表示明确列为在建的IT容量；园区总规模另列。交付时间是业主目标，尚未到手的容量不计入现有基础。",
+      "metric": "在建分期 / 园区建设规模 / 交付目标",
+      "period": "按项目单列 · 核查2026-11-09",
+      "sourceLabel": "运营商 / SEC申报 / 项目业主",
+      "sourceUrl": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age/",
+      "notice": "10 GW是Stargate总体承诺，不等于一个10 GW机房，也不能视为全部已开工。本页展示已经找到施工或分期证据的项目；国家覆盖不完整，不做在建容量国家排名。",
+      "methodology": "优先采用申报文件或业主明确列为Construction的IT分期。仅确认园区开工、未披露各分期状态的，显示园区规划全期规模但不计入明确在建IT合计。已有交付的园区单列已交付比例，不用不同口径数字倒算剩余MW。",
+      "limitations": "这是已核实项目清单，不是各国完整建设管线。交付时间可能变化；建成机电设施不等于GPU全部安装或GPU高利用率。",
+      "tiers": [],
+      "records": [
+        {
+          "country": "US",
+          "tier": 0,
+          "value": "6条已核实项目/分期",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "项目进展",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 27.4,
+          "numericValue": 27.4,
+          "numericUnit": "GW IT",
+          "projectCount": 6,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [
+            {
+              "label": "Frontier · Shackelford",
+              "value": "1,400 MW IT；Oracle预计2027上半年开始客户交付；全部分期完成时间未核实。"
+            },
+            {
+              "label": "Lighthouse · Port Washington",
+              "value": "902 MW IT；2027下半年开始客户交付；Vantage园区完工目标2028年。"
+            },
+            {
+              "label": "Milam · 两栋在建分期",
+              "value": "753 MW IT；1号楼2027年起交付；2号楼2028年起交付；两栋目标均于2028年完成。"
+            },
+            {
+              "label": "The Barn · Saline",
+              "value": "1 GW · 园区披露；Oracle预计2027下半年开始客户交付。"
+            },
+            {
+              "label": "Abilene · Stargate首座园区",
+              "value": "75% 已交付；剩余容量于随后季度交付，具体MW和日期待补。"
+            },
+            {
+              "label": "Project Jupiter · Doña Ana",
+              "value": "IT容量待披露；Oracle预计2027上半年开始客户交付。"
+            }
+          ],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [
+            {
+              "title": "Frontier campus",
+              "publisher": "Vantage",
+              "date": "read 2026-11-09",
+              "url": "https://vantage-dc.com/data-center-locations/north-america/shackelford-county-tx"
+            },
+            {
+              "title": "Frontier construction announcement",
+              "publisher": "Vantage",
+              "date": "2025-08-19",
+              "url": "https://vantage-dc.com/news/vantage-data-centers-unveils-plans-for-frontier-a-25b-mega-campus-in-texas-to-meet-unprecedented-ai-demand/"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09",
+              "url": "https://www.oracle.com/data-centers/"
+            },
+            {
+              "title": "Lighthouse campus",
+              "publisher": "Vantage",
+              "date": "read 2026-11-09",
+              "url": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin"
+            },
+            {
+              "title": "City project information",
+              "publisher": "City of Port Washington",
+              "date": "read 2026-11-09",
+              "url": "https://portdatacenter.com/"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09",
+              "url": "https://www.oracle.com/data-centers/"
+            },
+            {
+              "title": "SB Energy S-1/A Amendment2",
+              "publisher": "SB Energy / SEC",
+              "date": "2026-09-21",
+              "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+              "locator": "Data Center Contracted Portfolio；Development Timeline and Construction Milestones"
+            },
+            {
+              "title": "Data Centers",
+              "publisher": "SB Energy",
+              "date": "read 2026-11-09",
+              "url": "https://sbenergy.com/digital-infrastructure/"
+            },
+            {
+              "title": "SB Energy partnership",
+              "publisher": "OpenAI",
+              "date": "2026-01-09",
+              "url": "https://openai.com/index/stargate-sb-energy-partnership/"
+            },
+            {
+              "title": "Michigan groundbreaking",
+              "publisher": "OpenAI",
+              "date": "2026-06-01",
+              "url": "https://openai.com/index/stargate-michigan-data-center/"
+            },
+            {
+              "title": "Celebrate construction in Saline",
+              "publisher": "Oracle",
+              "date": "2026-06-01",
+              "url": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09",
+              "url": "https://www.oracle.com/data-centers/"
+            },
+            {
+              "title": "Abilene development update",
+              "publisher": "Crusoe",
+              "date": "2026-03-27",
+              "url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09; fact dated September2026",
+              "url": "https://www.oracle.com/data-centers/"
+            },
+            {
+              "title": "Construction permitting",
+              "publisher": "Oracle",
+              "date": "2026-09-14",
+              "url": "https://www.oracle.com/news/announcement/project-jupiter-statement-on-construction-permitting-2026-09-14/"
+            },
+            {
+              "title": "Local construction contracts",
+              "publisher": "Oracle",
+              "date": "2026-10-23",
+              "url": "https://www.oracle.com/news/announcement/project-jupiter-advances-new-mexico-workforce-growth-and-awards-nearly-1-billion-in-contracts-to-local-businesses-2026-10-23/"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09",
+              "url": "https://www.oracle.com/data-centers/"
+            }
+          ],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "CN",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 5.37,
+          "numericValue": 5.37,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "FR",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 0.87,
+          "numericValue": 0.87,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "GB",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.59,
+          "numericValue": 1.59,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "DE",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.26,
+          "numericValue": 1.26,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "CA",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.45,
+          "numericValue": 1.45,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "JP",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.64,
+          "numericValue": 1.64,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "KR",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 0.76,
+          "numericValue": 0.76,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "IN",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.39,
+          "numericValue": 1.39,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "AE",
+          "tier": 0,
+          "value": "1条已核实项目/分期",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "项目进展",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 1,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [
+            {
+              "label": "Stargate UAE · 首期",
+              "value": "200 MW · 首期电气容量；原目标2026年；本轮未取得正式投运确认，保留交付待核。"
+            }
+          ],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [
+            {
+              "title": "Stargate UAE首期施工进展",
+              "url": "https://www.prnewswire.com/apac/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586440.html",
+              "publisher": "G42（官方新闻稿）",
+              "date": "2025-10-16"
+            },
+            {
+              "title": "ALEC 2025年报 · Stargate首期",
+              "url": "https://ir.alec.ae/media/v2jpiqjp/alec-holdings-integrated-annual-report-2025-english.pdf",
+              "publisher": "ALEC Holdings",
+              "date": "2026年发布"
+            }
+          ],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "SA",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "SG",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 1.11,
+          "numericValue": 1.11,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "MY",
+          "tier": 0,
+          "value": "1条已核实项目/分期",
+          "subtitle": "已投运 · 数据库跟踪范围",
+          "status": "项目进展",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": 0.71,
+          "numericValue": 0.71,
+          "numericUnit": "GW IT",
+          "projectCount": 1,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [
+            {
+              "label": "DayOne · 柔佛与吉隆坡",
+              "value": "+744 MW IT；公司预计已签客户订单基本于2028年底前交付；未单列本地全部在建项目逐期日期。"
+            }
+          ],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [
+            {
+              "title": "DayOne F-1 · Our Footprint及在建定义",
+              "url": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+              "publisher": "DayOne / SEC",
+              "date": "2026-10-05申报 / 2026-09-20观测"
+            }
+          ],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "ID",
+          "tier": 0,
+          "value": "1条已核实项目/分期",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "项目进展",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 1,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [
+            {
+              "label": "DayOne · 巴淡岛",
+              "value": "+240 MW IT；公司预计已签客户订单基本于2028年底前交付；未单列本地全部在建项目逐期日期。"
+            }
+          ],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [
+            {
+              "title": "DayOne F-1 · Our Footprint及在建定义",
+              "url": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+              "publisher": "DayOne / SEC",
+              "date": "2026-10-05申报 / 2026-09-20观测"
+            }
+          ],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "VN",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "TH",
+          "tier": 0,
+          "value": "1条已核实项目/分期",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "项目进展",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 1,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [
+            {
+              "label": "DayOne · 大曼谷",
+              "value": "+47 MW IT；公司预计已签客户订单基本于2028年底前交付；未单列本地全部在建项目逐期日期。"
+            }
+          ],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [
+            {
+              "title": "DayOne F-1 · Our Footprint及在建定义",
+              "url": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+              "publisher": "DayOne / SEC",
+              "date": "2026-10-05申报 / 2026-09-20观测"
+            }
+          ],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "BR",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "MX",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "CL",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "ZA",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "KE",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "NG",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "EG",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "MA",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "KZ",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "TR",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "AR",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "PH",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "PK",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "BD",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        },
+        {
+          "country": "ET",
+          "tier": 0,
+          "value": "本轮项目证据待补",
+          "subtitle": "保留国别位置；可另查建设项目",
+          "status": "待补证",
+          "period": "逐项目日期见建设清单",
+          "shortPeriod": "2025 Q2",
+          "sortValue": null,
+          "numericValue": null,
+          "numericUnit": "GW IT",
+          "projectCount": 0,
+          "reason": "项目所在地归属；每一条保留状态、容量口径与交付目标。没有项目记录不表示该国没有建设活动。",
+          "facts": [],
+          "caveats": [
+            "项目不是全国合计；不与2025 Q2基线相加。"
+          ],
+          "sources": [],
+          "nextChecks": [
+            "补充更新、覆盖范围可复核的全国已投运IT容量。",
+            "按项目分期核实投运、在建、签约和规划，检查基线及项目之间的重复。"
+          ]
+        }
+      ],
+      "methodSources": [
+        {
+          "title": "Stargate建设进展与10 GW承诺",
+          "url": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age/",
+          "publisher": "OpenAI",
+          "date": "2026-04-29"
+        },
+        {
+          "title": "DayOne F-1 · Our Footprint及在建定义",
+          "url": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+          "publisher": "DayOne / SEC",
+          "date": "2026-10-05申报 / 2026-09-20观测"
+        },
+        {
+          "title": "SB Energy S-1/A Amendment2",
+          "publisher": "SB Energy / SEC",
+          "date": "2026-09-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+          "locator": "Data Center Contracted Portfolio; Development Timeline and Construction Milestones. Web lines16781-16783."
+        }
+      ],
+      "viewChoices": [
+        {
+          "id": "power",
+          "label": "已投运 IDC 基线"
+        },
+        {
+          "id": "power-growth",
+          "label": "在建与预期增长"
+        },
+        {
+          "id": "power-evidence",
+          "label": "现场供电旁证"
+        }
+      ],
+      "coverageLabel": "国有同源 IDC 基线",
+      "footnote": "项目之间可能属于同一计划。园区全期规模不等于当前在建分期；实际交付以投运证据为准。未将任何目标或项目数值直接加到2025 Q2基线上。",
+      "growthPreview": null,
+      "downloadUrl": "idc-live-it-capacity-2025q2-public.csv",
+      "baseId": "power",
+      "type": "pipeline",
+      "sourceHeading": "项目证据",
+      "projects": [
+        {
+          "id": "us-frontier",
+          "country": "US",
+          "name": "Frontier · Shackelford",
+          "capacityLabel": "1,400 MW IT",
+          "status": "园区已开工",
+          "date": "2026-09 / 2026-11-09查阅",
+          "construction": "Vantage于2025-08-19确认开工；Oracle展示2026年9月施工进展。",
+          "delivery": "Oracle预计2027上半年开始客户交付；全部分期完成时间未核实。",
+          "capacityNote": "这是十栋园区的全期设计规模；不能据开工推出1,400 MW全部同时在建。",
+          "group": "campus",
+          "liveMW": null,
+          "inConstructionMW": null,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "Frontier campus",
+              "publisher": "Vantage",
+              "date": "read 2026-11-09",
+              "url": "https://vantage-dc.com/data-center-locations/north-america/shackelford-county-tx"
+            },
+            {
+              "title": "Frontier construction announcement",
+              "publisher": "Vantage",
+              "date": "2025-08-19",
+              "url": "https://vantage-dc.com/news/vantage-data-centers-unveils-plans-for-frontier-a-25b-mega-campus-in-texas-to-meet-unprecedented-ai-demand/"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09",
+              "url": "https://www.oracle.com/data-centers/"
+            }
+          ],
+          "caveats": [
+            "Vantage旧版首栋目标为2026下半年；当前采用Oracle客户交付目标2027上半年，两者不是同一里程碑。"
+          ]
+        },
+        {
+          "id": "us-lighthouse",
+          "country": "US",
+          "name": "Lighthouse · Port Washington",
+          "capacityLabel": "902 MW IT",
+          "status": "园区已开工",
+          "date": "2026-08 / 2026-11-09查阅",
+          "construction": "市政府称2025年12月开工；Oracle展示2026年8月施工进展。",
+          "delivery": "2027下半年开始客户交付；Vantage园区完工目标2028年。",
+          "capacityNote": "四栋园区全期规模；首期MW未单列，不作为当前在建分期合计。",
+          "group": "campus",
+          "liveMW": null,
+          "inConstructionMW": null,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "Lighthouse campus",
+              "publisher": "Vantage",
+              "date": "read 2026-11-09",
+              "url": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin"
+            },
+            {
+              "title": "City project information",
+              "publisher": "City of Port Washington",
+              "date": "read 2026-11-09",
+              "url": "https://portdatacenter.com/"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09",
+              "url": "https://www.oracle.com/data-centers/"
+            }
+          ],
+          "caveats": [
+            "四栋园区全期规模；首期MW未单列，不作为当前在建分期合计。"
+          ]
+        },
+        {
+          "id": "us-milam",
+          "country": "US",
+          "name": "Milam · 两栋在建分期",
+          "capacityLabel": "753 MW IT",
+          "status": "分期在建",
+          "date": "2026-09-21",
+          "construction": "2026年4月获主体施工开工指令；申报明确两栋均处于Construction。",
+          "delivery": "1号楼2027年起交付；2号楼2028年起交付；两栋目标均于2028年完成。",
+          "capacityNote": "308 + 445 MW IT；与1.2 GW园区公告是同一项目，不重复计数。",
+          "group": "quantified",
+          "liveMW": null,
+          "inConstructionMW": 753,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "SB Energy S-1/A Amendment2",
+              "publisher": "SB Energy / SEC",
+              "date": "2026-09-21",
+              "url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+              "locator": "Data Center Contracted Portfolio；Development Timeline and Construction Milestones"
+            },
+            {
+              "title": "Data Centers",
+              "publisher": "SB Energy",
+              "date": "read 2026-11-09",
+              "url": "https://sbenergy.com/digital-infrastructure/"
+            },
+            {
+              "title": "SB Energy partnership",
+              "publisher": "OpenAI",
+              "date": "2026-01-09",
+              "url": "https://openai.com/index/stargate-sb-energy-partnership/"
+            }
+          ],
+          "caveats": [
+            "753 MW IT和OpenAI公告1.2 GW属于同一园区的不同口径；两项不相加。"
+          ]
+        },
+        {
+          "id": "us-saline",
+          "country": "US",
+          "name": "The Barn · Saline",
+          "capacityLabel": "1 GW · 园区披露",
+          "status": "园区已开工",
+          "date": "2026-06 / 2026-11-09查阅",
+          "construction": "2026-06-01官方开工公告；Oracle确认建设人员已进场。",
+          "delivery": "Oracle预计2027下半年开始客户交付。",
+          "capacityNote": "公告未明确IT/设施功率边界，保留园区口径，不并入IT增量。",
+          "group": "campus",
+          "liveMW": null,
+          "inConstructionMW": null,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "Michigan groundbreaking",
+              "publisher": "OpenAI",
+              "date": "2026-06-01",
+              "url": "https://openai.com/index/stargate-michigan-data-center/"
+            },
+            {
+              "title": "Celebrate construction in Saline",
+              "publisher": "Oracle",
+              "date": "2026-06-01",
+              "url": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09",
+              "url": "https://www.oracle.com/data-centers/"
+            }
+          ],
+          "caveats": [
+            "公告未明确IT/设施功率边界，保留园区口径，不并入IT增量。"
+          ]
+        },
+        {
+          "id": "us-abilene",
+          "country": "US",
+          "name": "Abilene · Stargate首座园区",
+          "capacityLabel": "75% 已交付",
+          "status": "部分交付",
+          "date": "2026-09",
+          "construction": "Oracle披露截至2026年9月交付75%；其余容量随后季度交付。",
+          "delivery": "剩余容量于随后季度交付，具体MW和日期待补。",
+          "capacityNote": "园区整体公告1.2 GW，包含已交付部分；75%的容量基数未明确，不倒算为900 MW IT。",
+          "group": "partial",
+          "liveMW": null,
+          "inConstructionMW": null,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "Abilene development update",
+              "publisher": "Crusoe",
+              "date": "2026-03-27",
+              "url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09; fact dated September2026",
+              "url": "https://www.oracle.com/data-centers/"
+            }
+          ],
+          "caveats": [
+            "毗邻微软900 MW园区是另一客户项目，未作为原Stargate园区增量重复列入。"
+          ],
+          "deliveredPercent": 75
+        },
+        {
+          "id": "us-jupiter",
+          "country": "US",
+          "name": "Project Jupiter · Doña Ana",
+          "capacityLabel": "IT容量待披露",
+          "status": "机房在建",
+          "date": "2026-10-23",
+          "construction": "Oracle确认机房在建并披露本地施工合同；独立微电网许可尚有约束。",
+          "delivery": "Oracle预计2027上半年开始客户交付。",
+          "capacityNote": "发电设备或微电网规模不能替代IDC IT容量；本条不计MW。",
+          "group": "campus",
+          "liveMW": null,
+          "inConstructionMW": null,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "Construction permitting",
+              "publisher": "Oracle",
+              "date": "2026-09-14",
+              "url": "https://www.oracle.com/news/announcement/project-jupiter-statement-on-construction-permitting-2026-09-14/"
+            },
+            {
+              "title": "Local construction contracts",
+              "publisher": "Oracle",
+              "date": "2026-10-23",
+              "url": "https://www.oracle.com/news/announcement/project-jupiter-advances-new-mexico-workforce-growth-and-awards-nearly-1-billion-in-contracts-to-local-businesses-2026-10-23/"
+            },
+            {
+              "title": "Data Center Locations",
+              "publisher": "Oracle",
+              "date": "read 2026-11-09",
+              "url": "https://www.oracle.com/data-centers/"
+            }
+          ],
+          "caveats": [
+            "发电设备或微电网规模不能替代IDC IT容量；本条不计MW。"
+          ]
+        },
+        {
+          "id": "dayone-my",
+          "country": "MY",
+          "name": "DayOne · 柔佛与吉隆坡",
+          "capacityLabel": "+744 MW IT",
+          "status": "申报在建",
+          "date": "2026-09-20",
+          "construction": "公司申报明确列为Capacity Under Construction；机电设施尚未达到可服务状态。",
+          "delivery": "公司预计已签客户订单基本于2028年底前交付；未单列本地全部在建项目逐期日期。",
+          "capacityNote": "同一运营商的本地项目组合，非全国总量。在建为柔佛616 MW + 吉隆坡128 MW；已投运789 MW均在柔佛。",
+          "group": "quantified",
+          "liveMW": 789,
+          "inConstructionMW": 744,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "DayOne F-1 · Our Footprint及在建定义",
+              "url": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+              "publisher": "DayOne / SEC",
+              "date": "2026-10-05申报 / 2026-09-20观测"
+            }
+          ],
+          "caveats": [
+            "柱条只对比同一运营商、同一时点的已投运与在建容量，不与国别历史基线相加。",
+            "2028年是公司订单组合目标，不是本地每一期的保证投运日期。"
+          ]
+        },
+        {
+          "id": "dayone-id",
+          "country": "ID",
+          "name": "DayOne · 巴淡岛",
+          "capacityLabel": "+240 MW IT",
+          "status": "申报在建",
+          "date": "2026-09-20",
+          "construction": "公司申报明确列为Capacity Under Construction；机电设施尚未达到可服务状态。",
+          "delivery": "公司预计已签客户订单基本于2028年底前交付；未单列本地全部在建项目逐期日期。",
+          "capacityNote": "同一运营商的本地项目组合，非全国总量。",
+          "group": "quantified",
+          "liveMW": 72,
+          "inConstructionMW": 240,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "DayOne F-1 · Our Footprint及在建定义",
+              "url": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+              "publisher": "DayOne / SEC",
+              "date": "2026-10-05申报 / 2026-09-20观测"
+            }
+          ],
+          "caveats": [
+            "柱条只对比同一运营商、同一时点的已投运与在建容量，不与国别历史基线相加。",
+            "2028年是公司订单组合目标，不是本地每一期的保证投运日期。"
+          ]
+        },
+        {
+          "id": "dayone-th",
+          "country": "TH",
+          "name": "DayOne · 大曼谷",
+          "capacityLabel": "+47 MW IT",
+          "status": "申报在建",
+          "date": "2026-09-20",
+          "construction": "公司申报明确列为Capacity Under Construction；机电设施尚未达到可服务状态。",
+          "delivery": "公司预计已签客户订单基本于2028年底前交付；未单列本地全部在建项目逐期日期。",
+          "capacityNote": "同一运营商的本地项目组合，非全国总量。",
+          "group": "quantified",
+          "liveMW": 73,
+          "inConstructionMW": 47,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "DayOne F-1 · Our Footprint及在建定义",
+              "url": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+              "publisher": "DayOne / SEC",
+              "date": "2026-10-05申报 / 2026-09-20观测"
+            }
+          ],
+          "caveats": [
+            "柱条只对比同一运营商、同一时点的已投运与在建容量，不与国别历史基线相加。",
+            "2028年是公司订单组合目标，不是本地每一期的保证投运日期。"
+          ]
+        },
+        {
+          "id": "ae-stargate-phase1",
+          "country": "AE",
+          "name": "Stargate UAE · 首期",
+          "capacityLabel": "200 MW · 首期电气容量",
+          "status": "有施工证据 / 交付待核",
+          "date": "2025年报 / 2026年发布",
+          "construction": "G42确认首期施工；承包商ALEC年报再次列为在建。",
+          "delivery": "原目标2026年；本轮未取得正式投运确认，保留交付待核。",
+          "capacityNote": "200 MW首期属于1 GW集群，集群又属于5 GW园区概念；三者不相加。承包商称电气容量，未直接作为IT值。",
+          "group": "campus",
+          "liveMW": null,
+          "inConstructionMW": null,
+          "canAddToCountryBaseline": false,
+          "sources": [
+            {
+              "title": "Stargate UAE首期施工进展",
+              "url": "https://www.prnewswire.com/apac/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586440.html",
+              "publisher": "G42（官方新闻稿）",
+              "date": "2025-10-16"
+            },
+            {
+              "title": "ALEC 2025年报 · Stargate首期",
+              "url": "https://ir.alec.ae/media/v2jpiqjp/alec-holdings-integrated-annual-report-2025-english.pdf",
+              "publisher": "ALEC Holdings",
+              "date": "2026年发布"
+            }
+          ],
+          "caveats": [
+            "本轮施工证据较早，不能据目标年已到便认定投运；需补最新验收及交付文件。"
+          ]
+        }
+      ],
+      "program": {
+        "title": "Stargate：10 GW总体承诺，逐站点核查兑现",
+        "value": "10 GW",
+        "label": "原始建设承诺 · 多站点计划",
+        "text": "OpenAI于2026年4月称已锁定超过原定10 GW目标的资源。锁定资源不等于全部开工；下方只列已找到施工、分期或交付证据的站点。",
+        "source": {
+          "title": "Stargate建设进展与10 GW承诺",
+          "url": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age/",
+          "publisher": "OpenAI",
+          "date": "2026-04-29"
+        },
+        "notes": [
+          "Oracle、SoftBank、NVIDIA的框架容量与单个站点可能重叠，不重复相加。",
+          "10 GW不加到美国27.40 GW历史基线上，也不作为当前已投运容量。",
+          "PORTS-Pike 8.024 GW IT在2026-09-21申报中为已签约、尚未开工；未计入本页在建分期。"
+        ]
+      }
+    },
+    {
+      "id": "power-evidence",
+      "name": "现场供电旁证",
+      "type": "evidence",
       "kicker": "05 / POWER & EXPANSION",
-      "title": "已核实的供电规模，至少到哪一级",
-      "description": "这里只接受已通电且明确为设施供电或电网连接容量的证据。≥L表示已核实规模至少达到该门槛，全国实际规模可能更高；其余口径保留详情但不定级。",
-      "metric": "已接电设施供电容量 · 已核实下限",
+      "title": "接电和实际负荷，作为现场旁证",
+      "description": "电网公司和运营商的接电、实际负荷与用电量，说明现场进展。每项保留原始单位和范围，不用于IDC容量分级。",
+      "metric": "运行与扩容事实 · 逐项对齐口径",
       "period": "各项单列 · 核查2026-11-09",
       "sourceHeading": "证据来源",
       "sourceLabel": "电网公司 / 政府 / 运营商",
       "sourceUrl": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
-      "notice": "这是一张取证下限图，不是全国总量排名。4国覆盖边界各不相同，不能用马来西亚4.5 GW与美国单项目150 MW推断国家强弱；未知和其他口径不归最低档。",
-      "methodology": "先按国家记录可追溯的运行与扩容事实，再从中筛选已经通电、明确为设施供电或电网连接容量的项目。仅汇总不重叠的已核实范围，以MW设置数量级门槛。本轮没有全国容量普查，因此分层一律表示≥L下限，而非国家总量等级。",
-      "limitations": "各国证据覆盖差别显著：美国和南非为单项目，法国为输电网直连范围，马来西亚为TNB服务范围。不能据下限判断马来西亚供电能力超过美国。IT容量、实际负荷、年度电量、在建和规划均不计入供电梯度。",
+      "notice": "供电容量、IT容量、实际负荷和年度电量分别展示。本页没有国家能力梯度；单项目与电网公司组合不能比较国家总量。",
+      "methodology": "按证据性质分组；不同设施范围、单位和时期不合并。基线和建设清单请切换至对应视图。",
+      "limitations": "仅是本轮查到的现场披露，不是全国普查；全部取消由零散供电下限生成的国家层级。",
       "methodSources": [
         {
           "title": "Key Questions on Energy and AI · 电力与接电约束",
@@ -20501,53 +21953,22 @@ window.ATLAS_DATA = {
           "locator": ""
         }
       ],
-      "tiers": [
-        {
-          "level": 5,
-          "title": "至少十GW级",
-          "range": "已核实下限 ≥ 10 GW",
-          "definition": "至少已核实10 GW已接电设施供电容量。"
-        },
-        {
-          "level": 4,
-          "title": "至少GW级",
-          "range": "下限 1–不足10 GW",
-          "definition": "当前已核实下限至少1 GW；真实全国总量可能处于更高层级。"
-        },
-        {
-          "level": 3,
-          "title": "至少百MW级",
-          "range": "下限 100–不足1,000 MW",
-          "definition": "当前已核实下限至少100 MW；真实全国总量可能处于更高层级。"
-        },
-        {
-          "level": 2,
-          "title": "至少十MW级",
-          "range": "下限 10–不足100 MW",
-          "definition": "当前已核实下限至少10 MW；真实全国总量可能处于更高层级。"
-        },
-        {
-          "level": 1,
-          "title": "已有供电实证",
-          "range": "已核实下限不足10 MW",
-          "definition": "仅当取得可核实的已通电容量才入档；未知不按零处理。"
-        }
-      ],
+      "tiers": [],
       "records": [
         {
           "country": "US",
-          "tier": 3,
-          "isLowerBound": true,
+          "tier": 0,
+          "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "≥ 150 MW",
-          "subtitle": "≥L3 · Memphis Paul Lowry 单个项目；非全国总量",
-          "status": "已核实供电下限",
+          "value": "2024 年用电估计 192 TWh；另有单项目接电实证",
+          "subtitle": "全国电量和单项目供电证据分别展示。已核验供电下限仅反映本轮取证范围，不可据此比较国家总量。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2025-05-05",
+          "shortPeriod": "2024 / 2025-05-05",
           "sortValue": 0,
-          "numericValue": 150,
+          "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "全国电量和单项目供电证据分别展示。已核验供电下限仅反映本轮取证范围，不可据此比较国家总量。 已核实供电下限达到L3门槛，标为≥L3；不能据此确定全国上限或国家排名。",
+          "reason": "全国电量和单项目供电证据分别展示。已核验供电下限仅反映本轮取证范围，不可据此比较国家总量。",
           "facts": [
             {
               "label": "Colossus 1 已获得电网供电 · 已接电",
@@ -20559,11 +21980,9 @@ window.ATLAS_DATA = {
             }
           ],
           "caveats": [
-            "仅一个已核验项目下限，绝非美国全国容量；同文追加 150 MW 仍为申请/建设，不能计入。",
             "LBNL 2026 年更新的设备自下而上估算；电量不是接电容量，不换算成供电梯度。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -20623,15 +22042,15 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "供电容量口径待补",
-          "subtitle": "2025 年全国算力中心用电 170 TWh",
-          "status": "其他口径旁证",
+          "value": "2025 年全国算力中心用电 170 TWh",
+          "subtitle": "国家能源局发布用电量；另有 196 TWh 不同口径，尚未对账。已接电供电容量暂未得到全国同口径证据。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2025",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "国家能源局发布用电量；另有 196 TWh 不同口径，尚未对账。已接电供电容量暂未得到全国同口径证据。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "国家能源局发布用电量；另有 196 TWh 不同口径，尚未对账。已接电供电容量暂未得到全国同口径证据。",
           "facts": [
             {
               "label": "全国算力中心年度用电量 · 官方披露",
@@ -20646,8 +22065,7 @@ window.ATLAS_DATA = {
             "算力中心包含非 AI 业务；与其他来源“数据中心/算力基础设施”口径有差异，不折算接电容量。",
             "与国家能源局 170 TWh 未完成范围对账，仅作为口径冲突提示；不相加、不替代主事实。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -20704,18 +22122,18 @@ window.ATLAS_DATA = {
         },
         {
           "country": "FR",
-          "tier": 3,
-          "isLowerBound": true,
+          "tier": 0,
+          "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "≥ 770 MW",
-          "subtitle": "≥L3 · 仅 RTE 输电网直连数据中心，不含配电网接入；非全国总量",
-          "status": "已核实供电下限",
+          "value": "RTE 直连供电容量 770 MW",
+          "subtitle": "2025 年末输电网运营商披露，未包含配电网数据中心；报告同时提示实际用电爬坡慢于接电容量。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2025-12",
+          "shortPeriod": "2025 / 2025-12",
           "sortValue": 0,
-          "numericValue": 770,
+          "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "2025 年末输电网运营商披露，未包含配电网数据中心；报告同时提示实际用电爬坡慢于接电容量。 已核实供电下限达到L3门槛，标为≥L3；不能据此确定全国上限或国家排名。",
+          "reason": "2025 年末输电网运营商披露，未包含配电网数据中心；报告同时提示实际用电爬坡慢于接电容量。",
           "facts": [
             {
               "label": "直接接入输电网的数据中心连接容量 · 已接电",
@@ -20727,11 +22145,9 @@ window.ATLAS_DATA = {
             }
           ],
           "caveats": [
-            "这是可核实的全国下限，非全国总量，非 AI 专用容量。",
             "电力连接容量使用率，非服务器或 GPU 利用率。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -20784,15 +22200,15 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "供电容量口径待补",
-          "subtitle": "2024 年大不列颠数据中心用电估计 4.5 TWh",
-          "status": "其他口径旁证",
+          "value": "2024 年大不列颠数据中心用电估计 4.5 TWh",
+          "subtitle": "政府以电表资料估算；排除企业内部数据中心，范围并非完整英国。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2024",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "政府以电表资料估算；排除企业内部数据中心，范围并非完整英国。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "政府以电表资料估算；排除企业内部数据中心，范围并非完整英国。",
           "facts": [
             {
               "label": "大不列颠数据中心从电网用电 · 基于电表的估计",
@@ -20802,8 +22218,7 @@ window.ATLAS_DATA = {
           "caveats": [
             "范围小于英国全国；不能换算为完整接电容量。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -20841,15 +22256,15 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "供电容量口径待补",
-          "subtitle": "2026 年 IT 容量估计 3.3 GW",
-          "status": "其他口径旁证",
+          "value": "2026 年 IT 容量估计 3.3 GW",
+          "subtitle": "Bitkom/Borderstep 的全国行业估计，提供 IT 承载证据；与设施供电容量口径分开。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2026",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "Bitkom/Borderstep 的全国行业估计，提供 IT 承载证据；与设施供电容量口径分开。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "Bitkom/Borderstep 的全国行业估计，提供 IT 承载证据；与设施供电容量口径分开。",
           "facts": [
             {
               "label": "数据中心 IT 接入容量估计 · 本年估计",
@@ -20859,8 +22274,7 @@ window.ATLAS_DATA = {
           "caveats": [
             "行业研究估计，明确是 IT 容量，不能与设施总供电 MW 混排。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -20898,20 +22312,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -20925,15 +22338,15 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "constraints",
-          "value": "供电容量口径待补",
-          "subtitle": "官方指出部分项目接电需十年以上",
-          "status": "其他口径旁证",
+          "value": "官方指出部分项目接电需十年以上",
+          "subtitle": "METI 将电网扩建、脱碳电源与通信同步规划列为数据中心扩张条件；当前供电容量待补证。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2026",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "METI 将电网扩建、脱碳电源与通信同步规划列为数据中心扩张条件；当前供电容量待补证。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "METI 将电网扩建、脱碳电源与通信同步规划列为数据中心扩张条件；当前供电容量待补证。",
           "facts": [
             {
               "label": "部分数据中心接电等待时间 · 接电约束",
@@ -20943,8 +22356,7 @@ window.ATLAS_DATA = {
           "caveats": [
             "是部分案例的约束，不是全国平均等待年限，也不代表所有项目。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -20982,20 +22394,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21009,15 +22420,15 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "供电容量口径待补",
-          "subtitle": "政府披露已安装数据中心容量约 1,575 MW",
-          "status": "其他口径旁证",
+          "value": "政府披露已安装数据中心容量约 1,575 MW",
+          "subtitle": "2026 年 8 月议会答复提供规模证据，但 MW 的电力边界不明确，暂不与接电容量混排。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2026-08-05",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "2026 年 8 月议会答复提供规模证据，但 MW 的电力边界不明确，暂不与接电容量混排。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "2026 年 8 月议会答复提供规模证据，但 MW 的电力边界不明确，暂不与接电容量混排。",
           "facts": [
             {
               "label": "全国已安装数据中心容量 · 已安装披露",
@@ -21027,8 +22438,7 @@ window.ATLAS_DATA = {
           "caveats": [
             "原文未明确是 IT 负荷、设施总功率或接电容量，不能直接纳入供电梯度。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21066,15 +22476,15 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "供电容量口径待补",
-          "subtitle": "AUH6 已启用 31.8 MW IT；Stargate 首期投运待核",
-          "status": "其他口径旁证",
+          "value": "AUH6 已启用 31.8 MW IT；Stargate 首期投运待核",
+          "subtitle": "已运营项目和建设目标分开；5 GW 园区、1 GW 集群及 200 MW 首期属于包含关系，不相加。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2024-02 / 2025-05-22",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "已运营项目和建设目标分开；5 GW 园区、1 GW 集群及 200 MW 首期属于包含关系，不相加。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "已运营项目和建设目标分开；5 GW 园区、1 GW 集群及 200 MW 首期属于包含关系，不相加。",
           "facts": [
             {
               "label": "AUH6 已启用 IT 电力容量 · 已运营",
@@ -21089,8 +22499,7 @@ window.ATLAS_DATA = {
             "运营商披露的是 IT 容量，非设施总供电，非全国总量。",
             "这是原始建设公告；本轮未核实投运，不能因日历已到 2026 年就算已上线。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21150,15 +22559,15 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "供电容量口径待补",
-          "subtitle": "stc 披露 2024 年末活跃 IT 容量 92 MW",
-          "status": "其他口径旁证",
+          "value": "stc 披露 2024 年末活跃 IT 容量 92 MW",
+          "subtitle": "当前可靠数值是运营商组合和较早市场统计；国家级 GW 建设目标不能直接写成已投运。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2024-03 / 2024-12",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "当前可靠数值是运营商组合和较早市场统计；国家级 GW 建设目标不能直接写成已投运。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "当前可靠数值是运营商组合和较早市场统计；国家级 GW 建设目标不能直接写成已投运。",
           "facts": [
             {
               "label": "stc 数据中心活跃容量 · 已运营",
@@ -21173,8 +22582,7 @@ window.ATLAS_DATA = {
             "IT/critical load 口径；集团资料涉及扩建与巴林规划，不能泛化为沙特全国供电总量。",
             "日期较早、MW 基准未明确，只作历史旁证，不作当前供电梯队。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21234,15 +22642,15 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "供电容量口径待补",
-          "subtitle": "2024 年用电约 6.5 TWh；1.6 GW 含新获配容量",
-          "status": "其他口径旁证",
+          "value": "2024 年用电约 6.5 TWh；1.6 GW 含新获配容量",
+          "subtitle": "政府明确 1.6 GW 是 IT 容量且含 200 MW 新分配指标，不能整体标为已投运。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2024 / 2026-10-07",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "政府明确 1.6 GW 是 IT 容量且含 200 MW 新分配指标，不能整体标为已投运。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "政府明确 1.6 GW 是 IT 容量且含 200 MW 新分配指标，不能整体标为已投运。",
           "facts": [
             {
               "label": "数据中心最大 IT 容量（含新获配） · 含新获配容量",
@@ -21257,8 +22665,7 @@ window.ATLAS_DATA = {
             "不能全部算作已投运；不得与 Jurong Island 700 MW 园区供电规划相加，两者有重合。",
             "年度电量不是 IT 容量或设施供电容量。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21308,44 +22715,40 @@ window.ATLAS_DATA = {
         },
         {
           "country": "MY",
-          "tier": 4,
-          "isLowerBound": true,
+          "tier": 0,
+          "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "≥ 4,500 MW",
-          "subtitle": "≥L4 · TNB 服务范围，35 个项目；非全国总量",
-          "status": "已核实供电下限",
-          "period": "各项数据期见下；本轮核查2026-11-09",
-          "shortPeriod": "2025-12",
+          "value": "实际负荷 1.256 GW",
+          "subtitle": "42个已接入项目最大需求容量5.65 GW；非IT容量",
+          "status": "现场旁证",
+          "period": "2026-06 / 2026-08-28发布",
+          "shortPeriod": "2026-06",
           "sortValue": 0,
-          "numericValue": 4500,
+          "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "2025 年末电力公司分列了已接电、在建和签约容量，能够核验接电能力及负荷爬坡；供电范围并非全国普查。 已核实供电下限达到L4门槛，标为≥L4；不能据此确定全国上限或国家排名。",
+          "reason": "TNB报告明确分列已接入系统、实际负荷、在建和签约。5.65 GW是项目最大需求容量，不是已投运IT容量。",
           "facts": [
             {
-              "label": "已接入电网的数据中心最大需求容量 · 已接电",
-              "value": "4,500 MW · 2025-12；TNB 服务范围，35 个项目"
+              "label": "已接入系统 · 42项目",
+              "value": "最大需求容量5.65 GW"
             },
             {
-              "label": "实际数据中心负荷 · 实际负荷",
-              "value": "850 MW · 2025-12；TNB 服务范围"
+              "label": "6月实际负荷",
+              "value": "1,256 MW"
             },
             {
-              "label": "在建供电项目最大需求容量 · 在建",
-              "value": "1,800 MW · 2025-12；TNB 14 个项目"
+              "label": "在建 · 16项目",
+              "value": "最大需求容量2.21 GW"
             },
             {
-              "label": "仅已签供电协议的最大需求容量 · 已签约",
-              "value": "1,200 MW · 2025-12；TNB 7 个项目"
+              "label": "已签供电协议 · 3项目",
+              "value": "最大需求容量0.49 GW"
             }
           ],
           "caveats": [
-            "接电容量包含尚未充分爬坡的项目，不是实际负荷，也不是全国 AI 专用容量；2025 年末观察值。",
-            "报告未说明是月均还是特定时点；不能用其与接电容量的比值推算 GPU 利用率。",
-            "在建，不计入已接电梯度。",
-            "签约，不计入已接电梯度。",
-            "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "范围为TNB项目服务组合，非马来西亚全部数据中心普查。",
+            "在建和签约不计入已接入；四项不混成IT容量。",
+            "实际负荷的统计时点以报告表述为准；不推算GPU利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21353,95 +22756,33 @@ window.ATLAS_DATA = {
           ],
           "sources": [
             {
-              "title": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "url": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "publisher": "Tenaga Nasional Berhad",
-              "date": "2026",
-              "locator": "范围与数据期见条目"
+              "title": "TNB 2QFY2026 Analyst Briefing",
+              "url": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_2QFY2026.pdf#page=4",
+              "publisher": "TNB",
+              "date": "2026-08-28发布 / 2026-06观测",
+              "locator": "第4页"
             }
           ],
-          "powerEvidence": [
-            {
-              "label": "已接入电网的数据中心最大需求容量",
-              "value": 4500,
-              "unit": "MW",
-              "metricBasis": "grid_connection_capacity",
-              "status": "connected",
-              "date": "2025-12",
-              "scope": "TNB 服务范围，35 个项目",
-              "sourceId": "MY_TNB_2025",
-              "sourceURL": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "sourceTitle": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "caveat": "接电容量包含尚未充分爬坡的项目，不是实际负荷，也不是全国 AI 专用容量；2025 年末观察值。",
-              "tierEligible": true,
-              "isLowerBound": true
-            },
-            {
-              "label": "实际数据中心负荷",
-              "value": 850,
-              "unit": "MW",
-              "metricBasis": "actual_electric_load",
-              "status": "measured_load",
-              "date": "2025-12",
-              "scope": "TNB 服务范围",
-              "sourceId": "MY_TNB_2025",
-              "sourceURL": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "sourceTitle": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "caveat": "报告未说明是月均还是特定时点；不能用其与接电容量的比值推算 GPU 利用率。",
-              "tierEligible": false,
-              "isLowerBound": false
-            },
-            {
-              "label": "在建供电项目最大需求容量",
-              "value": 1800,
-              "unit": "MW",
-              "metricBasis": "grid_connection_capacity",
-              "status": "under_construction",
-              "date": "2025-12",
-              "scope": "TNB 14 个项目",
-              "sourceId": "MY_TNB_2025",
-              "sourceURL": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "sourceTitle": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "caveat": "在建，不计入已接电梯度。",
-              "tierEligible": false,
-              "isLowerBound": false
-            },
-            {
-              "label": "仅已签供电协议的最大需求容量",
-              "value": 1200,
-              "unit": "MW",
-              "metricBasis": "grid_connection_capacity",
-              "status": "contracted",
-              "date": "2025-12",
-              "scope": "TNB 7 个项目",
-              "sourceId": "MY_TNB_2025",
-              "sourceURL": "https://www.tnb.com.my/assets/quarterly_results/Analyst_Briefing_-_4QFY2025.pdf",
-              "sourceTitle": "TNB 4QFY2025 Analyst Briefing — Data Centre, p.22",
-              "caveat": "签约，不计入已接电梯度。",
-              "tierEligible": false,
-              "isLowerBound": false
-            }
-          ]
+          "powerEvidence": []
         },
         {
           "country": "ID",
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21455,20 +22796,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21482,20 +22822,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21509,20 +22848,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21536,20 +22874,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21563,20 +22900,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21587,18 +22923,18 @@ window.ATLAS_DATA = {
         },
         {
           "country": "ZA",
-          "tier": 2,
-          "isLowerBound": true,
+          "tier": 0,
+          "isLowerBound": false,
           "evidenceGroup": "reported",
-          "value": "≥ 80 MW",
-          "subtitle": "≥L2 · Teraco JB4 单个数据中心；非全国总量",
-          "status": "已核实供电下限",
+          "value": "JB4 已具备 80 MW 供电、50 MW IT 容量",
+          "subtitle": "运营商扩建完成公告明确列出供电与 IT 两个边界，是适合用于供电下限的现场证据。",
+          "status": "现场旁证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "2025-08-12",
           "sortValue": 0,
-          "numericValue": 80,
+          "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "运营商扩建完成公告明确列出供电与 IT 两个边界，是适合用于供电下限的现场证据。 已核实供电下限达到L2门槛，标为≥L2；不能据此确定全国上限或国家排名。",
+          "reason": "运营商扩建完成公告明确列出供电与 IT 两个边界，是适合用于供电下限的现场证据。",
           "facts": [
             {
               "label": "JB4 公用电网供电容量 · 已运营",
@@ -21610,11 +22946,9 @@ window.ATLAS_DATA = {
             }
           ],
           "caveats": [
-            "扩建完成公告明确区分 80 MW utility power 和 50 MW IT，单项目下限，不是全国总量。",
             "与 80 MW 供电是同一项目两个边界，不相加。",
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21667,20 +23001,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21694,20 +23027,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21721,20 +23053,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21748,20 +23079,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21775,20 +23105,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21802,20 +23131,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21829,20 +23157,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21856,20 +23183,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21883,20 +23209,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21910,20 +23235,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21937,20 +23261,19 @@ window.ATLAS_DATA = {
           "tier": 0,
           "isLowerBound": false,
           "evidenceGroup": "unknown",
-          "value": "供电容量口径待补",
-          "subtitle": "未取得可核实已接电设施供电容量",
+          "value": "供电口径待补证",
+          "subtitle": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "status": "待补证",
           "period": "各项数据期见下；本轮核查2026-11-09",
           "shortPeriod": "待核",
           "sortValue": 0,
           "numericValue": null,
           "numericUnit": "MW · 设施供电下限",
-          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。 本轮没有足够同口径供电容量证据，不作供电梯度定级。",
+          "reason": "本轮尚未采集到可用于该口径的已投运数据中心供电证据；不表示没有数据中心或供电能力。",
           "facts": [],
           "caveats": [
             "设施供电MW、IT设备容量MW、实际负荷MW、年度电量TWh是不同量，不能直接相加或混排。",
-            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。",
-            "本轮披露范围不同。已核实下限的大小不能解释为国家总量大小；缺失不能解释为零。"
+            "数据中心包含非AI业务；供电能力不等于GPU已安装、可调度或实际利用率。"
           ],
           "nextChecks": [
             "继续核验全国设施供电容量，并去除园区、分期与运营商组合之间的重复。",
@@ -21960,7 +23283,7 @@ window.ATLAS_DATA = {
           "powerEvidence": []
         }
       ],
-      "lowerBoundTiers": true,
+      "lowerBoundTiers": false,
       "evidenceGroups": [
         {
           "id": "reported",
@@ -21987,30 +23310,35 @@ window.ATLAS_DATA = {
       "viewChoices": [
         {
           "id": "power",
-          "label": "运行与扩容证据"
+          "label": "已投运 IDC 基线"
         },
         {
-          "id": "power-capacity",
-          "label": "供电规模下限梯度"
+          "id": "power-growth",
+          "label": "在建与预期增长"
+        },
+        {
+          "id": "power-evidence",
+          "label": "现场供电旁证"
         }
       ],
-      "footnote": "≥L为已核实下限：国家真实层级可能更高。未取得全国同口径数据，不给国家总量排序；不由电量、IT容量或规划规模推算供电容量。",
-      "baseId": "power"
+      "footnote": "接电能力与实际负荷不等于IT已部署容量，不能由负荷/接电比例推算GPU利用率。",
+      "baseId": "power",
+      "growthPreview": null
     }
   ],
   "audit": {
-    "scope": "2026-11-09：新增电力与资本，主导航调整为六维；原网络数据移入应用辅助视图。其余四维数值和开放模型样本保留前版快照，不冒充本日重采。",
+    "scope": "2026-11-09：电力页采用IDC已投运同源基线，并新增按项目、分期与交付目标展示的在建增长。撤销零散供电下限梯度。其余五维保留前版。",
     "items": [
       {
-        "label": "电力 / 状态与口径",
-        "title": "接电、IT容量、实际负荷分开",
-        "text": "优先展示有来源的运行与扩容事实。只以已通电且明确为设施供电容量的证据计算下限；IT容量、用电量和建设计划不混排。下限的高低也受本轮覆盖范围影响，不能据此推导国家排名。",
+        "label": "电力 / 基础与增长",
+        "title": "同源基线与建设分期分开",
+        "text": "2025 Q2已投运IT容量覆盖11/31国。Stargate 10 GW承诺另列，逐站点核实施工、容量定义及预计交付；不把全期设计规模当成当前在建增量。",
         "source": {
-          "title": "Key Questions on Energy and AI · 电力与接电约束",
-          "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
-          "publisher": "IEA",
-          "date": "2026",
-          "locator": ""
+          "title": "意大利央行研究 · 表1（Bloomberg–DC Byte）",
+          "url": "https://www.bancaditalia.it/pubblicazioni/qef/2026-1014/QEF_1014_26.pdf?language_id=1#page=12",
+          "publisher": "Banca d’Italia",
+          "date": "2026-06发布 / 2025 Q2数据",
+          "locator": "PDF第10页定义、第12页国别表"
         }
       },
       {
@@ -22045,8 +23373,8 @@ window.ATLAS_DATA = {
     ],
     "proposals": [
       {
-        "title": "电力：扩容条件",
-        "text": "继续核验接电期限、已落实新增容量、工业电价与供电可靠性。协议、在建与已投运分开；国家发电量只作背景。"
+        "title": "电力：补齐全国覆盖与交付证据",
+        "text": "争取更新且口径一致的完整国别IDC容量表，逐项目跟踪交付、接电及实际负荷。施工中的目标不自动升级为已投运。"
       },
       {
         "title": "资本：公共资金与落地投资",
